@@ -1,6 +1,5 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "PcdOXGiJAYF0MMFfLi0ELF/X+CtD21KD4K01nu+ohUF7fiUPUcACETTJplhs2GVFtjUT0iR8ayci9DYNbMOD3w==",
   "success": true,
   "projectFilePath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\Aurora\\AuroraAPI.csproj",
@@ -73,11 +72,12 @@
     "C:\\Users\\HP\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-=======
-  "dgSpecHash": "fwpKJaPIo047dWpQP87B0BzqV33B4s6p/+VSb/jvbsQ3zi0V+tWBvYM+hqMTmsiN8iclwrAZ0g5ogD0iSWlXSw==",
-  "success": true,
-  "projectFilePath": "F:\\FinalProject\\Aurora\\Aurora\\AuroraAPI.csproj",
-  "expectedPackageFiles": [],
->>>>>>> 1b200a71e3b0de606cb057cae309e8347a7083dd
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\HP\\Desktop\\Project\\Aurora\\Aurora\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
