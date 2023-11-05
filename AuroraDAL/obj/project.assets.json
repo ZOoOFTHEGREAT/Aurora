@@ -13,11 +13,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
+      "projectUniqueName": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\AuroraDAL.csproj",
+      "projectName": "AuroraDAL",
+      "projectPath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\AuroraDAL.csproj",
+      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\obj\\",
+=======
       "projectUniqueName": "F:\\FinalProject\\Aurora\\AuroraDAL\\AuroraDAL.csproj",
       "projectName": "AuroraDAL",
       "projectPath": "F:\\FinalProject\\Aurora\\AuroraDAL\\AuroraDAL.csproj",
       "packagesPath": "C:\\Users\\Ragab\\.nuget\\packages\\",
       "outputPath": "F:\\FinalProject\\Aurora\\AuroraDAL\\obj\\",
+>>>>>>> 1b200a71e3b0de606cb057cae309e8347a7083dd
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ragab\\AppData\\Roaming\\NuGet\\NuGet.Config",

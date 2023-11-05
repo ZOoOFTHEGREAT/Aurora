@@ -1,6 +1,19 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
+    "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraBLL\\AuroraBLL.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraBLL\\AuroraBLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraBLL\\AuroraBLL.csproj",
+        "projectName": "AuroraBLL",
+        "projectPath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraBLL\\AuroraBLL.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraBLL\\obj\\",
+=======
     "F:\\FinalProject\\Aurora\\AuroraBLL\\AuroraBLL.csproj": {}
   },
   "projects": {
@@ -12,6 +25,7 @@
         "projectPath": "F:\\FinalProject\\Aurora\\AuroraBLL\\AuroraBLL.csproj",
         "packagesPath": "C:\\Users\\Ragab\\.nuget\\packages\\",
         "outputPath": "F:\\FinalProject\\Aurora\\AuroraBLL\\obj\\",
+>>>>>>> 1b200a71e3b0de606cb057cae309e8347a7083dd
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ragab\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +42,13 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
+<<<<<<< HEAD
+              "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\AuroraDAL.csproj": {
+                "projectPath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\AuroraDAL.csproj"
+=======
               "F:\\FinalProject\\Aurora\\AuroraDAL\\AuroraDAL.csproj": {
                 "projectPath": "F:\\FinalProject\\Aurora\\AuroraDAL\\AuroraDAL.csproj"
+>>>>>>> 1b200a71e3b0de606cb057cae309e8347a7083dd
               }
             }
           }
@@ -58,6 +77,16 @@
         }
       }
     },
+<<<<<<< HEAD
+    "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\AuroraDAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\AuroraDAL.csproj",
+        "projectName": "AuroraDAL",
+        "projectPath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\AuroraDAL.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\obj\\",
+=======
     "F:\\FinalProject\\Aurora\\AuroraDAL\\AuroraDAL.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -66,6 +95,7 @@
         "projectPath": "F:\\FinalProject\\Aurora\\AuroraDAL\\AuroraDAL.csproj",
         "packagesPath": "C:\\Users\\Ragab\\.nuget\\packages\\",
         "outputPath": "F:\\FinalProject\\Aurora\\AuroraDAL\\obj\\",
+>>>>>>> 1b200a71e3b0de606cb057cae309e8347a7083dd
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ragab\\AppData\\Roaming\\NuGet\\NuGet.Config",
