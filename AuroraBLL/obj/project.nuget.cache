@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "moR4dY2KMGbipGkTDKMP91mYhEyoiY5LcqZZy5YKEKsjug/skv3BAdKb10e1mddkaPLC+puAKpboW2bWxz2UqA==",
+  "dgSpecHash": "KC/L/4v0HvEH+CykEX/HIc37eIQhLzI0OvLz1Y1l0aiw4n7bLc+b2o3Wvbz272/7uIDFmdRH2NkP/bSrfEcFwQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HP\\Desktop\\Aurora\\AuroraBLL\\AuroraBLL.csproj",
+  "projectFilePath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraBLL\\AuroraBLL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

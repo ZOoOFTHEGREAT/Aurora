@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Desktop\\Aurora\\AuroraDAL\\AuroraDAL.csproj": {}
+    "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\AuroraDAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Desktop\\Aurora\\AuroraDAL\\AuroraDAL.csproj": {
+    "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\AuroraDAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\Aurora\\AuroraDAL\\AuroraDAL.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\AuroraDAL.csproj",
         "projectName": "AuroraDAL",
-        "projectPath": "C:\\Users\\HP\\Desktop\\Aurora\\AuroraDAL\\AuroraDAL.csproj",
+        "projectPath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\AuroraDAL.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\Aurora\\AuroraDAL\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

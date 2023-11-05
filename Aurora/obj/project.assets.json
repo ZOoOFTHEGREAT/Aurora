@@ -3257,11 +3257,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\Desktop\\Aurora\\Aurora\\AuroraAPI.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\Aurora\\AuroraAPI.csproj",
       "projectName": "AuroraAPI",
-      "projectPath": "C:\\Users\\HP\\Desktop\\Aurora\\Aurora\\AuroraAPI.csproj",
+      "projectPath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\Aurora\\AuroraAPI.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\Desktop\\Aurora\\Aurora\\obj\\",
+      "outputPath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\Aurora\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3282,8 +3282,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\HP\\Desktop\\Aurora\\AuroraBLL\\AuroraBLL.csproj": {
-              "projectPath": "C:\\Users\\HP\\Desktop\\Aurora\\AuroraBLL\\AuroraBLL.csproj"
+            "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraBLL\\AuroraBLL.csproj": {
+              "projectPath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraBLL\\AuroraBLL.csproj"
             }
           }
         }
