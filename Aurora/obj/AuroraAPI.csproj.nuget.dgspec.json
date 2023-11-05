@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Desktop\\Project\\Aurora\\Aurora\\AuroraAPI.csproj": {}
+    "F:\\FinalProject\\Aurora\\Aurora\\AuroraAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraBLL\\AuroraBLL.csproj": {
+    "F:\\FinalProject\\Aurora\\AuroraBLL\\AuroraBLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraBLL\\AuroraBLL.csproj",
+        "projectUniqueName": "F:\\FinalProject\\Aurora\\AuroraBLL\\AuroraBLL.csproj",
         "projectName": "AuroraBLL",
-        "projectPath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraBLL\\AuroraBLL.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraBLL\\obj\\",
+        "projectPath": "F:\\FinalProject\\Aurora\\AuroraBLL\\AuroraBLL.csproj",
+        "packagesPath": "C:\\Users\\Ragab\\.nuget\\packages\\",
+        "outputPath": "F:\\FinalProject\\Aurora\\AuroraBLL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Ragab\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\AuroraDAL.csproj": {
-                "projectPath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\AuroraDAL.csproj"
+              "F:\\FinalProject\\Aurora\\AuroraDAL\\AuroraDAL.csproj": {
+                "projectPath": "F:\\FinalProject\\Aurora\\AuroraDAL\\AuroraDAL.csproj"
               }
             }
           }
@@ -47,20 +43,6 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "dependencies": {
-            "System.IdentityModel.Tokens.Jwt": {
-              "target": "Package",
-              "version": "[7.0.3, )"
-            },
-            "microsoft.aspnetcore.authentication.jwtbearer": {
-              "target": "Package",
-              "version": "[7.0.13, )"
-            },
-            "microsoft.identitymodel.tokens": {
-              "target": "Package",
-              "version": "[7.0.3, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -72,30 +54,21 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.416\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\AuroraDAL.csproj": {
+    "F:\\FinalProject\\Aurora\\AuroraDAL\\AuroraDAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\AuroraDAL.csproj",
+        "projectUniqueName": "F:\\FinalProject\\Aurora\\AuroraDAL\\AuroraDAL.csproj",
         "projectName": "AuroraDAL",
-        "projectPath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\AuroraDAL.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\obj\\",
+        "projectPath": "F:\\FinalProject\\Aurora\\AuroraDAL\\AuroraDAL.csproj",
+        "packagesPath": "C:\\Users\\Ragab\\.nuget\\packages\\",
+        "outputPath": "F:\\FinalProject\\Aurora\\AuroraDAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Ragab\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -120,40 +93,6 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[7.0.13, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[7.0.13, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[7.0.13, )"
-            },
-            "System.IdentityModel.Tokens.Jwt": {
-              "target": "Package",
-              "version": "[7.0.3, )"
-            },
-            "microsoft.aspnetcore.authentication.jwtbearer": {
-              "target": "Package",
-              "version": "[7.0.13, )"
-            },
-            "microsoft.aspnetcore.identity.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[7.0.13, )"
-            },
-            "microsoft.identitymodel.tokens": {
-              "target": "Package",
-              "version": "[7.0.3, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -165,30 +104,21 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.416\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\HP\\Desktop\\Project\\Aurora\\Aurora\\AuroraAPI.csproj": {
+    "F:\\FinalProject\\Aurora\\Aurora\\AuroraAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\Aurora\\AuroraAPI.csproj",
+        "projectUniqueName": "F:\\FinalProject\\Aurora\\Aurora\\AuroraAPI.csproj",
         "projectName": "AuroraAPI",
-        "projectPath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\Aurora\\AuroraAPI.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\Aurora\\obj\\",
+        "projectPath": "F:\\FinalProject\\Aurora\\Aurora\\AuroraAPI.csproj",
+        "packagesPath": "C:\\Users\\Ragab\\.nuget\\packages\\",
+        "outputPath": "F:\\FinalProject\\Aurora\\Aurora\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Ragab\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -202,8 +132,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraBLL\\AuroraBLL.csproj": {
-                "projectPath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraBLL\\AuroraBLL.csproj"
+              "F:\\FinalProject\\Aurora\\AuroraBLL\\AuroraBLL.csproj": {
+                "projectPath": "F:\\FinalProject\\Aurora\\AuroraBLL\\AuroraBLL.csproj"
               }
             }
           }
@@ -217,22 +147,6 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "dependencies": {
-            "Microsoft.AspNetCore.OpenApi": {
-              "target": "Package",
-              "version": "[7.0.13, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[7.0.13, )"
-            },
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.5.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -244,15 +158,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.416\\RuntimeIdentifierGraph.json"
         }
       }
     }
