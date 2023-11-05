@@ -1,0 +1,14 @@
+C:\Users\HP\Desktop\Aurora\AuroraDAL\bin\Debug\net7.0\AuroraDAL.deps.json
+C:\Users\HP\Desktop\Aurora\AuroraDAL\bin\Debug\net7.0\AuroraDAL.runtimeconfig.json
+C:\Users\HP\Desktop\Aurora\AuroraDAL\bin\Debug\net7.0\AuroraDAL.dll
+C:\Users\HP\Desktop\Aurora\AuroraDAL\bin\Debug\net7.0\AuroraDAL.pdb
+C:\Users\HP\Desktop\Aurora\AuroraDAL\obj\Debug\net7.0\AuroraDAL.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\Aurora\AuroraDAL\obj\Debug\net7.0\AuroraDAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\Aurora\AuroraDAL\obj\Debug\net7.0\AuroraDAL.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\Aurora\AuroraDAL\obj\Debug\net7.0\AuroraDAL.AssemblyInfo.cs
+C:\Users\HP\Desktop\Aurora\AuroraDAL\obj\Debug\net7.0\AuroraDAL.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\Aurora\AuroraDAL\obj\Debug\net7.0\AuroraDAL.dll
+C:\Users\HP\Desktop\Aurora\AuroraDAL\obj\Debug\net7.0\refint\AuroraDAL.dll
+C:\Users\HP\Desktop\Aurora\AuroraDAL\obj\Debug\net7.0\AuroraDAL.pdb
+C:\Users\HP\Desktop\Aurora\AuroraDAL\obj\Debug\net7.0\AuroraDAL.genruntimeconfig.cache
+C:\Users\HP\Desktop\Aurora\AuroraDAL\obj\Debug\net7.0\ref\AuroraDAL.dll
