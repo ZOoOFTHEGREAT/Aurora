@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "KC/L/4v0HvEH+CykEX/HIc37eIQhLzI0OvLz1Y1l0aiw4n7bLc+b2o3Wvbz272/7uIDFmdRH2NkP/bSrfEcFwQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraBLL\\AuroraBLL.csproj",
@@ -60,5 +61,11 @@
     "C:\\Users\\HP\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
+=======
+  "dgSpecHash": "E9hTxEUkl6+PUSKzIRsDfqiY8huiX2KWPoE2XGsrXJlKF8RzZH8P8e7UTCvx/CD/f/adB3j+C6ZDk23o6K0TyQ==",
+  "success": true,
+  "projectFilePath": "F:\\FinalProject\\Aurora\\AuroraBLL\\AuroraBLL.csproj",
+  "expectedPackageFiles": [],
+>>>>>>> 1b200a71e3b0de606cb057cae309e8347a7083dd
   "logs": []
 }
