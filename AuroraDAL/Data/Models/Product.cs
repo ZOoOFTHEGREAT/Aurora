@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AuroraDAL.Data.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,5 +10,15 @@ namespace AuroraDAL;
 public class Product
 {
     public int Id { get; set; }
+    public string Name { get; set; }=string.Empty;
+    public decimal Price { get; set; }
+    public int Quantity { get; set; }
+    public decimal DiscountPercent { get; set; }
+    public string Description { get; set; } = string.Empty;
+    public int? CategoryId { get; set; }
+    public Category Category { get; set; } = null!;
+    public CartItem CartItem { get; set; } = null!;
+    public OrderItem OrderItem { get; set; } = null!;
+    public virtual ICollection<Image> Images { get; set; } = new List<Image>();
 
 }
