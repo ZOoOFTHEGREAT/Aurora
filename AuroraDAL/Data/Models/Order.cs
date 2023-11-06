@@ -10,15 +10,15 @@ namespace AuroraDAL;
 public class Order
 {
     public int Id { get; set; }
-    public int TotalPrice { get; set; }
-    public bool Price { get; set; }
-    public DateTime DelivaryDatem { get; set; }
+    public decimal TotalPrice { get; set; }
+    public bool Status { get; set; }
+    public DateTime DeliveryDate { get; set; }
     public DateTime CreatedAt { get; set; }
     public DateTime ExpectedDelivaryDate { get; set; }
 
 
     public int? UserId { get; set; }
-    public int? PaymentDetailsId { get; set; }
+    
     public int? ShippingCompanyId { get; set; }
     public int? AddressId { get; set; }
 

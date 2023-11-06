@@ -24,8 +24,8 @@ namespace AuroraDAL.Data.Configuration
 
             builder.HasMany(x => x.Products)
                .WithOne(x => x.Category)
-               .HasForeignKey(x => x.CategoryId)
-               .IsRequired();
+               .HasForeignKey(x => x.CategoryId);
+               
 
             builder.HasData(new List<Category>
             {

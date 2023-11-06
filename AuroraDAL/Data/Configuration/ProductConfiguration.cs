@@ -13,6 +13,32 @@ namespace AuroraDAL.Data.Configuration
         public void Configure(EntityTypeBuilder<Product> builder)
         {
             builder.HasKey(i => i.Id);
+
+            builder.Property(x => x.Name)
+               .HasColumnType("varchar")
+               .IsRequired();
+
+            builder.Property(x => x.Price)
+               .HasColumnType("int")
+               .IsRequired();
+
+            builder.Property(x => x.Quantity)
+               .HasColumnType("int")
+               .IsRequired();
+
+            builder.Property(x => x.DiscountPercent)
+               .HasColumnType("int");
+
+            builder.Property(x => x.Description)
+               .HasColumnType("varchar")
+               .IsRequired();
+
+            builder.HasOne(x => x.Category)
+               .WithMany(x => x.Products)
+               .HasForeignKey(x => x.CategoryId)
+               .IsRequired();
+
+
         }
     }
 }
