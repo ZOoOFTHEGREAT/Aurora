@@ -12,7 +12,7 @@ public class Cart
 {
     public int Id { get; set; }
     public DateTime CreatedDate { get; set; }
-    public int? UserId { get; set; }
+    public int UserId { get; set; }
     public User User { get; set; } = null!;
-    public virtual ICollection<CartItem> Items { get; set;}=new List<CartItem>();
+    public virtual ICollection<CartItem> CartItems { get; set;}=new List<CartItem>();
 }

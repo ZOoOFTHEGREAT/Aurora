@@ -14,4 +14,5 @@ public class CartItem
     public int? ProductId { get; set; }
     public Product Product { get; set; } = null!;
     public Cart Cart { get; set; } = null!;
+   
 }
