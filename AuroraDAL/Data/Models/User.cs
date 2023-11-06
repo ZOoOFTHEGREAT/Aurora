@@ -11,6 +11,7 @@ public class User:IdentityUser
 {
     public string Fname { get; set; } = string.Empty;
     public string Lname { get; set; } = string.Empty;
+    public int ZipCode { get; set; }
 
     public Cart Cart { get; set; } = null!;
     public virtual ICollection<Order> Orders { get; set; }=new List<Order>();

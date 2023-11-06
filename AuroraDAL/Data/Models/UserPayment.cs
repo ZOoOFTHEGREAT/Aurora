@@ -18,6 +18,8 @@ public class UserPayment
     public int? UserId { get; set; }
     public User User { get; set; } = null!;
 
+    public ICollection<PaymentDetail> PaymentDetails= new List<PaymentDetail>();
+
 
 
 }

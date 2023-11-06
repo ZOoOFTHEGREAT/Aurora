@@ -14,4 +14,5 @@ public class PaymentDetail
     public DateTime Date { get; set; }
 
     public Order Order { get; set; } = null!;
+    public UserPayment UserPayment { get; set; }=null!;
 }
