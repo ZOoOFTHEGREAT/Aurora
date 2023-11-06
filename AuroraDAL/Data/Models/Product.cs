@@ -17,8 +17,8 @@ public class Product
     public string Description { get; set; } = string.Empty;
     public int? CategoryId { get; set; }
     public Category Category { get; set; } = null!;
-    public CartItem CartItem { get; set; } = null!;
-    public OrderItem OrderItem { get; set; } = null!;
+    public CartItem? CartItem { get; set; }
+    public virtual ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
     public virtual ICollection<Image> Images { get; set; } = new List<Image>();
 
 }

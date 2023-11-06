@@ -17,5 +17,6 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
 
         builder.Property(i => i.Lname).HasColumnType("varchar")
          .HasMaxLength(25);
+
     }
 }

@@ -23,7 +23,7 @@ public class Order
     public int? AddressId { get; set; }
 
     public  User User { get; set; } = null!;
-    public ShippingCompany ShippingCompany { get; set; } = null!;
+    public ShippingCompany ShippingCompany { get; set; } = null!;   
     public UserAddress UserAddress { get; set; } = null!;
     public virtual ICollection<OrderItem> OrderItems { get; set; }=new List<OrderItem>();
     public virtual ICollection<PaymentDetail> PaymentDetails { get; set; } = new List<PaymentDetail>();
