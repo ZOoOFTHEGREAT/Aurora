@@ -8,4 +8,6 @@ namespace AuroraDAL;
 
 public interface ICartItemRepo:IGenericRepo<CartItem>
 {
+    List<CartItem>? GetCartItemByCartId(int id);
+
 }
