@@ -1,5 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 namespace AuroraDAL.Data.Configuration
 {
-    public class CartItemConfiguration : IEntityTypeConfiguration<CartItemRepo>
+    public class CartItemConfiguration : IEntityTypeConfiguration<CartItem>
     {
-        public void Configure(EntityTypeBuilder<CartItemRepo> builder)
+        public void Configure(EntityTypeBuilder<CartItem> builder)
         {
             builder.HasKey(i => i.Id);
 
@@ -23,11 +23,9 @@ namespace AuroraDAL.Data.Configuration
              .IsRequired();
 
             builder.HasOne(x => x.Product)
-            .WithOne(x => x.CartItem)
-            .HasForeignKey<CartItemRepo>(x => x.ProductId)
+            .WithMany(x => x.CartItem)
+            .HasForeignKey(x => x.ProductId)
             .IsRequired();
-
-          
 
 
         }

@@ -8,4 +8,6 @@ namespace AuroraDAL;
 
 public interface IPaymentDetailRepo:IGenericRepo<PaymentDetail>
 {
+    List<PaymentDetail>? GetPaymentDetailsByOrderId(int id);
+    List<PaymentDetail>? GetPaymentDetailsByUserPayment(int id);
 }
