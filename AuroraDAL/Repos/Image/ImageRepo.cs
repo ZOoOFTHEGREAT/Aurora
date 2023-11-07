@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AuroraDAL.Repos;
+namespace AuroraDAL;
 
 public class ImageRepo : GenericRepo<Image>, IImageRepo
 {

@@ -26,8 +26,23 @@ namespace Aurora
 
             #endregion
 
-            #region Repos
+            #region Unit Of Work
+            builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+            #endregion
 
+            #region Repos
+            builder.Services.AddScoped<IProductRepo    , ProductRepo>();
+            builder.Services.AddScoped<IUserAddressRepo, UserAddressRepo>();
+            builder.Services.AddScoped<IUserPaymentRepo, UserPaymentRepo>();
+            builder.Services.AddScoped<IUserRepo, UserRepo>();
+            builder.Services.AddScoped<IShippingCompanyRepo, ShippingCompanyRepo>();
+            builder.Services.AddScoped<IPaymentDetailRepo  , PaymentDetailRepo  >();
+            builder.Services.AddScoped<IOrderItemRepo      , OrderItemRepo      >();
+            builder.Services.AddScoped<IOrderRepo          , OrderRepo          >();
+            builder.Services.AddScoped<IImageRepo          , ImageRepo          >();
+            builder.Services.AddScoped<ICategoryRepo       , CategoryRepo       >();
+            builder.Services.AddScoped<ICartItemRepo       , CartItemRepo       >();
+            builder.Services.AddScoped<ICartRepo, CartRepo>();
             #endregion
 
             var app = builder.Build();
