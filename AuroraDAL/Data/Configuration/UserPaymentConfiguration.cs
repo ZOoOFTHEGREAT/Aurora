@@ -14,6 +14,7 @@ public class UserPaymentConfiguration : IEntityTypeConfiguration<UserPayment>
     public void Configure(EntityTypeBuilder<UserPayment> builder)
     {
         builder.HasKey(i => i.Id);
+        builder.Property(i => i.Id).ValueGeneratedOnAdd();
 
         builder.Property(i => i.PaymentType).
               HasColumnType("varchar").

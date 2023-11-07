@@ -1,4 +1,4 @@
-﻿using AuroraDAL.Data.Models;
+﻿using AuroraDAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -11,6 +11,8 @@ public class UserAddressConfiguration : IEntityTypeConfiguration<UserAddress>
             HasColumnType("varchar").
             HasMaxLength(25).IsRequired();
 
+        builder.Property(i => i.Id).ValueGeneratedOnAdd();
+
         builder.Property(i => i.LineTwo).
             HasColumnType("varchar")
             .HasMaxLength(25);

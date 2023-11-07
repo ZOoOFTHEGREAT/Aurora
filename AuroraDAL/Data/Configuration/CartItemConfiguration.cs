@@ -7,9 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 namespace AuroraDAL.Data.Configuration
 {
-    public class CartItemConfiguration : IEntityTypeConfiguration<CartItem>
+    public class CartItemConfiguration : IEntityTypeConfiguration<CartItemRepo>
     {
-        public void Configure(EntityTypeBuilder<CartItem> builder)
+        public void Configure(EntityTypeBuilder<CartItemRepo> builder)
         {
             builder.HasKey(i => i.Id);
 
@@ -24,7 +24,7 @@ namespace AuroraDAL.Data.Configuration
 
             builder.HasOne(x => x.Product)
             .WithOne(x => x.CartItem)
-            .HasForeignKey<CartItem>(x => x.ProductId)
+            .HasForeignKey<CartItemRepo>(x => x.ProductId)
             .IsRequired();
 
           

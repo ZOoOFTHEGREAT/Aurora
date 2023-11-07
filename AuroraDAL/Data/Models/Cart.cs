@@ -1,4 +1,4 @@
-﻿using AuroraDAL.Data.Models;
+﻿using AuroraDAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,5 +14,5 @@ public class Cart
     public DateTime CreatedDate { get; set; }
     public int UserId { get; set; }
     public User User { get; set; } = null!;
-    public virtual ICollection<CartItem> CartItems { get; set;}=new List<CartItem>();
+    public virtual ICollection<CartItemRepo> CartItems { get; set;}=new List<CartItemRepo>();
 }
