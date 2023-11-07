@@ -8,6 +8,7 @@ namespace AuroraDAL;
 
 public class OrderRepo : GenericRepo<Order>, IOrderRepo
 {
+    #region Inject 
     private readonly AppDbContext appDbContext;
 
     public OrderRepo(AppDbContext appDbContext) : base(appDbContext)
@@ -15,14 +16,19 @@ public class OrderRepo : GenericRepo<Order>, IOrderRepo
         this.appDbContext = appDbContext;
 
     }
+    #endregion
 
-    public List<Order>? GetOrdersByShippingCompanyId(int id)
+    #region Get Order By Shipping Company
+    public List<Order>? GetOrdersByShippingCompanyId(int ShippingCompanyId)
     {
-        return appDbContext.Orders.Where(x => x.ShippingCompanyId == id).ToList();
+        return appDbContext.Orders.Where(x => x.ShippingCompanyId == ShippingCompanyId).ToList();
     }
+    #endregion
 
-    public List<Order>? GetOrderssByUserId(int id)
+    #region Get Order by user id 
+    public List<Order>? GetOrderssByUserId(int UserId)
     {
-        return appDbContext.Orders.Where(x => x.UserId == id).ToList();
+        return appDbContext.Orders.Where(x => x.UserId == UserId).ToList();
     }
+    #endregion
 }

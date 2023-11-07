@@ -17,11 +17,7 @@ public class Product
     public string Description { get; set; } = string.Empty;
     public int? CategoryId { get; set; }
     public Category Category { get; set; } = null!;
-<<<<<<< HEAD
-    public CartItem? CartItem { get; set; }
-=======
-    public virtual ICollection<CartItem> CartItem { get; set; } = new List<CartItem>();
->>>>>>> aa42228b0aab2564633bf65df6994927db297703
+    public virtual ICollection<CartItem> CartItems { get; set; } = new List<CartItem>();
     public virtual ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
     public virtual ICollection<Image> Images { get; set; } = new List<Image>();
 

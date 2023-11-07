@@ -8,13 +8,19 @@ namespace AuroraDAL;
 
 public class UserAddressRepo : GenericRepo<UserAddress>, IUserAddressRepo
 {
+    #region Inject
     private readonly AppDbContext appDbContext;
 
     public UserAddressRepo(AppDbContext appDbContext) : base(appDbContext)
     {
         this.appDbContext = appDbContext;
     }
+    #endregion
 
-    public UserAddress? GetUserAddresByUserId(int UserId) => appDbContext
-        .Set<UserAddress>().FirstOrDefault(i=>i.UserId== UserId);
+    #region Get User Address By User Id
+    public UserAddress? GetUserAddresByUserId(int UserId)
+    {
+        return appDbContext.Set<UserAddress>().FirstOrDefault(i => i.UserId == UserId);
+    }
+    #endregion
 }

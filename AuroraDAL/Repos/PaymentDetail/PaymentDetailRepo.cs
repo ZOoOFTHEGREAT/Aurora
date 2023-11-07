@@ -9,20 +9,26 @@ namespace AuroraDAL;
 
 public class PaymentDetailRepo : GenericRepo<PaymentDetail>, IPaymentDetailRepo
 {
+    #region Inject 
     private readonly AppDbContext appDbContext;
 
     public PaymentDetailRepo(AppDbContext appDbContext) : base(appDbContext)
     {
           this.appDbContext = appDbContext;  
     }
+    #endregion
 
-    List<PaymentDetail>? IPaymentDetailRepo.GetPaymentDetailsByOrderId(int id)
+    #region Get Payment Details By Order Id 
+    List<PaymentDetail>? IPaymentDetailRepo.GetPaymentDetailsByOrderId(int OrderId)
     {
-          return appDbContext.PaymentDetails.Where(x => x.OrderId == id).ToList();
+          return appDbContext.PaymentDetails.Where(x => x.OrderId == OrderId).ToList();
     }
+    #endregion
 
-    List<PaymentDetail>? IPaymentDetailRepo.GetPaymentDetailsByUserPayment(int id)
+    #region Get Payment Details By User Payment 
+    List<PaymentDetail>? IPaymentDetailRepo.GetPaymentDetailsByUserPayment(int UserPaymentId)
     {
-         return appDbContext.PaymentDetails.Where(x => x.UserPaymentId == id).ToList();
+         return appDbContext.PaymentDetails.Where(x => x.UserPaymentId == UserPaymentId).ToList();
     }
+    #endregion
 }

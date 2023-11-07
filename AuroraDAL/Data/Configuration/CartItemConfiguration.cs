@@ -23,9 +23,8 @@ namespace AuroraDAL.Data.Configuration
              .IsRequired();
 
             builder.HasOne(x => x.Product)
-            .WithMany(x => x.CartItem)
+            .WithMany(x => x.CartItems)
             .HasForeignKey(x => x.ProductId)
->>>>>>> aa42228b0aab2564633bf65df6994927db297703
             .IsRequired();
 
 
