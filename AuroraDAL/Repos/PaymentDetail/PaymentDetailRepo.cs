@@ -19,16 +19,17 @@ public class PaymentDetailRepo : GenericRepo<PaymentDetail>, IPaymentDetailRepo
     #endregion
 
     #region Get Payment Details By Order Id 
-    List<PaymentDetail>? IPaymentDetailRepo.GetPaymentDetailsByOrderId(int OrderId)
+    public List<PaymentDetail>? GetPaymentDetailsByOrderId(int OrderId)
     {
           return appDbContext.PaymentDetails.Where(x => x.OrderId == OrderId).ToList();
     }
     #endregion
 
     #region Get Payment Details By User Payment 
-    List<PaymentDetail>? IPaymentDetailRepo.GetPaymentDetailsByUserPayment(int UserPaymentId)
+    public List<PaymentDetail>? GetPaymentDetailsByUserPayment(int UserPaymentId)
     {
          return appDbContext.PaymentDetails.Where(x => x.UserPaymentId == UserPaymentId).ToList();
     }
     #endregion
+
 }
