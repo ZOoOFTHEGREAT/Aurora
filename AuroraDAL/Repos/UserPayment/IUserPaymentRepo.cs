@@ -8,4 +8,5 @@ namespace AuroraDAL;
 
 public interface IUserPaymentRepo:IGenericRepo<UserPayment>
 {
+    UserPayment? GetUserPaymentByUserId(int UserId);
 }

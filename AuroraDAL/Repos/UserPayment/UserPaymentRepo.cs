@@ -8,7 +8,13 @@ namespace AuroraDAL;
 
 public class UserPaymentRepo : GenericRepo<UserPayment>, IUserPaymentRepo
 {
+    private readonly AppDbContext appDbContext;
+
     public UserPaymentRepo(AppDbContext appDbContext) : base(appDbContext)
     {
+        this.appDbContext = appDbContext;
     }
+
+    public UserPayment? GetUserPaymentByUserId(int UserId) => appDbContext
+        .Set<UserPayment>().FirstOrDefault(i=>i.UserId == UserId);
 }
