@@ -7,4 +7,5 @@ namespace AuroraDAL;
 
 public interface IImageRepo:IGenericRepo<Image>
 {
+    List<Image>? GetImagesByProductId(int id);
 }

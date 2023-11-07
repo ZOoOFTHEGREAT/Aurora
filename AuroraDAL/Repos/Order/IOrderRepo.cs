@@ -8,4 +8,6 @@ namespace AuroraDAL;
 
 public interface IOrderRepo:IGenericRepo<Order>
 {
+    List<Order>? GetOrderssByUserId(int id);
+    List<Order>? GetOrdersByShippingCompanyId(int id);
 }
