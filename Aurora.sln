@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34018.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuroraAPI", "Aurora\AuroraAPI.csproj", "{AAE42381-BA9B-4430-BCF6-2D5D443F5F72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuroraAPI", "Aurora\AuroraAPI.csproj", "{AAE42381-BA9B-4430-BCF6-2D5D443F5F72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuroraBLL", "AuroraBLL\AuroraBLL.csproj", "{EA9DD9B2-0880-458E-8164-3827EC0F2AE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuroraBLL", "AuroraBLL\AuroraBLL.csproj", "{EA9DD9B2-0880-458E-8164-3827EC0F2AE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuroraDAL", "AuroraDAL\AuroraDAL.csproj", "{9B1342C8-F865-424D-B4EB-08940F8EF2B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuroraDAL", "AuroraDAL\AuroraDAL.csproj", "{9B1342C8-F865-424D-B4EB-08940F8EF2B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

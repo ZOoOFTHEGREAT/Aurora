@@ -13,7 +13,7 @@ namespace AuroraDAL.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     [Migration("20231105010638_intial")]
-    partial class intial
+    partial class Intial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

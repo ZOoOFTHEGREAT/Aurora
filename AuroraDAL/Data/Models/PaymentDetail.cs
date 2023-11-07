@@ -12,6 +12,8 @@ public class PaymentDetail
     public decimal Amount { get; set; }
     public bool Status { get; set; }
     public DateTime Date { get; set; }
+    public int OrderId {  get; set; }
+    public int UserPaymentId { get; set; }
 
     public Order Order { get; set; } = null!;
     public UserPayment UserPayment { get; set; }=null!;

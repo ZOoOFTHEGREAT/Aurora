@@ -1,5 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,11 +23,14 @@ namespace AuroraDAL.Data.Configuration
              .IsRequired();
 
             builder.HasOne(x => x.Product)
+<<<<<<< HEAD
             .WithOne(x => x.CartItem)
             .HasForeignKey<CartItem>(x => x.ProductId)
+=======
+            .WithMany(x => x.CartItem)
+            .HasForeignKey(x => x.ProductId)
+>>>>>>> aa42228b0aab2564633bf65df6994927db297703
             .IsRequired();
-
-          
 
 
         }
