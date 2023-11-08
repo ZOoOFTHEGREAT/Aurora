@@ -15,7 +15,7 @@ public class UserPayment
     public int AccountNumber { get; set; }
     public DateTime ExpireDate { get; set; }
 
-    public int? UserId { get; set; }
+    public string UserId { get; set; } = string.Empty;
     public User User { get; set; } = null!;
 
     public ICollection<PaymentDetail> PaymentDetails= new List<PaymentDetail>();

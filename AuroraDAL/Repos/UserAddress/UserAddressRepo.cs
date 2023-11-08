@@ -18,7 +18,7 @@ public class UserAddressRepo : GenericRepo<UserAddress>, IUserAddressRepo
     #endregion
 
     #region Get User Address By User Id
-    public UserAddress? GetUserAddresByUserId(int UserId)
+    public UserAddress? GetUserAddresByUserId(string UserId)
     {
         return appDbContext.Set<UserAddress>().FirstOrDefault(i => i.UserId == UserId);
     }

@@ -26,7 +26,7 @@ public class OrderRepo : GenericRepo<Order>, IOrderRepo
     #endregion
 
     #region Get Order by user id 
-    public List<Order>? GetOrderssByUserId(int UserId)
+    public List<Order>? GetOrderssByUserId(string UserId)
     {
         return appDbContext.Orders.Where(x => x.UserId == UserId).ToList();
     }

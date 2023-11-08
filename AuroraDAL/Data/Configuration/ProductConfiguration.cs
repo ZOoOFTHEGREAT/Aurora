@@ -33,11 +33,6 @@ namespace AuroraDAL.Data.Configuration
                .HasColumnType("varchar")
                .IsRequired();
 
-            builder.HasOne(x => x.Category)
-               .WithMany(x => x.Products)
-               .HasForeignKey(x => x.CategoryId)
-               .IsRequired();
-
 
         }
     }

@@ -19,7 +19,7 @@ public class UserPaymentRepo : GenericRepo<UserPayment>, IUserPaymentRepo
     #endregion
 
     #region Get User Payment By User Id
-    public UserPayment? GetUserPaymentByUserId(int UserId)
+    public UserPayment? GetUserPaymentByUserId(string UserId)
     {
         return appDbContext.Set<UserPayment>().FirstOrDefault(i => i.UserId == UserId);
     }

@@ -28,39 +28,36 @@ namespace AuroraDAL.Data.Configuration
 
             builder.HasOne(x => x.UserPayment)
                .WithMany(x => x.PaymentDetails)
-               .HasForeignKey(x => x.UserPayment.Id)
+               .HasForeignKey(x => x.UserPaymentId)
+               .OnDelete(DeleteBehavior.NoAction)    
                .IsRequired();
 
-            builder.HasOne(x => x.Order)
-               .WithMany(x => x.PaymentDetails)
-               .HasForeignKey(x => x.Order.Id)
-               .IsRequired();
 
-            builder.HasData(new List<PaymentDetail>
-            {
-                new PaymentDetail
-                {
-                    Id=1,
-                    Amount=1000,
-                    Date=DateTime.Now,
-                    Status=true
-                },
-                new PaymentDetail
-                {
-                    Id=2,
-                    Amount=2000,
-                    Date=DateTime.Now,
-                    Status=true
-                },
-                 new PaymentDetail
-                {
-                    Id=3,
-                    Amount=3000,
-                    Date=DateTime.Now,
-                    Status=false
-                },
+            //builder.HasData(new List<PaymentDetail>
+            //{
+            //    new PaymentDetail
+            //    {
+            //        Id=1,
+            //        Amount=1000,
+            //        Date=DateTime.Now,
+            //        Status=true
+            //    },
+            //    new PaymentDetail
+            //    {
+            //        Id=2,
+            //        Amount=2000,
+            //        Date=DateTime.Now,
+            //        Status=true
+            //    },
+            //     new PaymentDetail
+            //    {
+            //        Id=3,
+            //        Amount=3000,
+            //        Date=DateTime.Now,
+            //        Status=false
+            //    },
 
-            });
+            //});
         }
     }
 }

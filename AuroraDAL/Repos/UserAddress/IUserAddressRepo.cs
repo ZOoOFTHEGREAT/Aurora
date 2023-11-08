@@ -8,5 +8,5 @@ namespace AuroraDAL;
 
 public interface IUserAddressRepo:IGenericRepo<UserAddress>
 {
-    UserAddress? GetUserAddresByUserId(int UserId);
+    UserAddress? GetUserAddresByUserId(string UserId);
 }

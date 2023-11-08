@@ -15,7 +15,7 @@ public class UserAddress
     public string? LineTwo { get; set; }
     public string Country { get; set;}= string.Empty;
     public string City { get; set; } = string.Empty;
-    public int? UserId { get; set; }
+    public string UserId { get; set; } = string.Empty;
     public User User { get; set; } = null!;
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
 

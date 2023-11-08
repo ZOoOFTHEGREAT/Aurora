@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\AuroraDAL.csproj": {}
+    "F:\\Aurora\\AuroraDAL\\AuroraDAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\AuroraDAL.csproj": {
+    "F:\\Aurora\\AuroraDAL\\AuroraDAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\AuroraDAL.csproj",
+        "projectUniqueName": "F:\\Aurora\\AuroraDAL\\AuroraDAL.csproj",
         "projectName": "AuroraDAL",
-        "projectPath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\AuroraDAL.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\obj\\",
+        "projectPath": "F:\\Aurora\\AuroraDAL\\AuroraDAL.csproj",
+        "packagesPath": "C:\\Users\\Ragab\\.nuget\\packages\\",
+        "outputPath": "F:\\Aurora\\AuroraDAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Ragab\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

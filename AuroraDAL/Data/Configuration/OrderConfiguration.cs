@@ -19,7 +19,7 @@ namespace AuroraDAL.Data.Configuration
                .IsRequired();
 
             builder.Property(x => x.Status)
-               .HasColumnType("bool");
+               .HasColumnType("bit");
 
             builder.Property(x => x.DeliveryDate)
                .HasColumnType("date")
@@ -39,7 +39,7 @@ namespace AuroraDAL.Data.Configuration
 
             builder.HasMany(x => x.PaymentDetails)
                 .WithOne(x => x.Order)
-                .HasForeignKey(x => x.Order.Id)
+                .HasForeignKey(x => x.OrderId)
                 .IsRequired();
 
 
@@ -51,40 +51,41 @@ namespace AuroraDAL.Data.Configuration
             builder.HasOne(x => x.UserAddress)
             .WithMany(x => x.Orders)
             .HasForeignKey(x => x.AddressId)
+            .OnDelete(DeleteBehavior.NoAction)
             .IsRequired();
 
-            builder.HasData(new List<Order>
-            {
+            //builder.HasData(new List<Order>
+            //{
 
-                new Order
-                {
-                Id = 1,
-                Status = true,
-                DeliveryDate = DateTime.Now.AddDays(3),
-                CreatedAt = DateTime.Now,
-                ExpectedDelivaryDate = DateTime.Now.AddDays(5) ,
-                },
+            //    new Order
+            //    {
+            //    Id = 1,
+            //    Status = true,
+            //    DeliveryDate = DateTime.Now.AddDays(3),
+            //    CreatedAt = DateTime.Now,
+            //    ExpectedDelivaryDate = DateTime.Now.AddDays(5) ,
+            //    },
 
 
-                new Order
-                {
-                Id = 2,
-                Status = true,
-                DeliveryDate = DateTime.Now.AddDays(3),
-                CreatedAt = DateTime.Now,
-                ExpectedDelivaryDate = DateTime.Now.AddDays(5),
-                },
+            //    new Order
+            //    {
+            //    Id = 2,
+            //    Status = true,
+            //    DeliveryDate = DateTime.Now.AddDays(3),
+            //    CreatedAt = DateTime.Now,
+            //    ExpectedDelivaryDate = DateTime.Now.AddDays(5),
+            //    },
 
-                new Order
-                {
-                Id = 1,
-                Status = true,
-                DeliveryDate = DateTime.Now.AddDays(3),
-                CreatedAt = DateTime.Now,
-                ExpectedDelivaryDate = DateTime.Now.AddDays(5),
-                },
+            //    new Order
+            //    {
+            //    Id = 1,
+            //    Status = true,
+            //    DeliveryDate = DateTime.Now.AddDays(3),
+            //    CreatedAt = DateTime.Now,
+            //    ExpectedDelivaryDate = DateTime.Now.AddDays(5),
+            //    },
 
-            });
+            //});
 
 
         }

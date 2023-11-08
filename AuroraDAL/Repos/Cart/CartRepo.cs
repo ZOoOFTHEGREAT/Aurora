@@ -18,7 +18,7 @@ public class CartRepo : GenericRepo<Cart>, ICartRepo
     #endregion
 
     #region Get Cart By User Id 
-    public List<Cart>? GetCartByUserId(int UserID)
+    public List<Cart>? GetCartByUserId(string UserID)
     {
         return appDbContext.Set<Cart>().Where(x => x.UserId == UserID).ToList();
     }
