@@ -28,18 +28,18 @@
     <Folder Include="Dtos\PaymentDetailDtos\" />
     <Folder Include="Dtos\OrderItemDtos\" />
     <Folder Include="Dtos\OrderDtos\" />
-    <Folder Include="Mangers\CartItemManger\" />
-    <Folder Include="Mangers\CategoryManger\" />
-    <Folder Include="Mangers\ImageManger\" />
-    <Folder Include="Mangers\OrderManger\" />
-    <Folder Include="Mangers\OrderItemManger\" />
-    <Folder Include="Mangers\PaymentDetailManger\" />
-    <Folder Include="Mangers\ProductManger\" />
-    <Folder Include="Mangers\ShippingCompanyManger\" />
-    <Folder Include="Mangers\UserAddressManger\" />
-    <Folder Include="Mangers\UserPaymentManger\" />
-    <Folder Include="Mangers\CartManger\" />
-    <Folder Include="Mangers\UserManger\" />
+    <Folder Include="Managers\CartItemManager\" />
+    <Folder Include="Managers\CategoryManager\" />
+    <Folder Include="Managers\ImageManager\" />
+    <Folder Include="Managers\OrderManager\" />
+    <Folder Include="Managers\OrderItemManager\" />
+    <Folder Include="Managers\PaymentDetailManager\" />
+    <Folder Include="Managers\ProductManager\" />
+    <Folder Include="Managers\ShippingCompanyManager\" />
+    <Folder Include="Managers\UserAddressManager\" />
+    <Folder Include="Managers\UserPaymentManager\" />
+    <Folder Include="Managers\CartManager\" />
+    <Folder Include="Managers\UserManager\" />
   </ItemGroup>
 
 </Project>
