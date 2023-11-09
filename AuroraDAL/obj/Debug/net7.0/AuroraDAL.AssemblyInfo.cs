@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AuroraDAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1351aff8f4c0b34853b1e50346ab2b609f6cb664")]
 [assembly: System.Reflection.AssemblyProductAttribute("AuroraDAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AuroraDAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -3251,19 +3251,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ragab\\.nuget\\packages\\": {}
+    "C:\\Users\\El-Wattaneya\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Aurora\\Aurora\\AuroraAPI.csproj",
+      "projectUniqueName": "F:\\iti\\F pro\\Aurora\\Aurora\\AuroraAPI.csproj",
       "projectName": "AuroraAPI",
-      "projectPath": "F:\\Aurora\\Aurora\\AuroraAPI.csproj",
-      "packagesPath": "C:\\Users\\Ragab\\.nuget\\packages\\",
-      "outputPath": "F:\\Aurora\\Aurora\\obj\\",
+      "projectPath": "F:\\iti\\F pro\\Aurora\\Aurora\\AuroraAPI.csproj",
+      "packagesPath": "C:\\Users\\El-Wattaneya\\.nuget\\packages\\",
+      "outputPath": "F:\\iti\\F pro\\Aurora\\Aurora\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Ragab\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\El-Wattaneya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3277,8 +3282,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "F:\\Aurora\\AuroraBLL\\AuroraBLL.csproj": {
-              "projectPath": "F:\\Aurora\\AuroraBLL\\AuroraBLL.csproj"
+            "F:\\iti\\F pro\\Aurora\\AuroraBLL\\AuroraBLL.csproj": {
+              "projectPath": "F:\\iti\\F pro\\Aurora\\AuroraBLL\\AuroraBLL.csproj"
             }
           }
         }
@@ -3287,6 +3292,9 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "default"
       }
     },
     "frameworks": {
@@ -3327,7 +3335,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-rc.1.23463.5\\RuntimeIdentifierGraph.json"
       }
     }
   }

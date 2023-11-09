@@ -58,3 +58,19 @@ F:\Aurora\AuroraBLL\obj\Debug\net7.0\AuroraBLL.dll
 F:\Aurora\AuroraBLL\obj\Debug\net7.0\refint\AuroraBLL.dll
 F:\Aurora\AuroraBLL\obj\Debug\net7.0\AuroraBLL.pdb
 F:\Aurora\AuroraBLL\obj\Debug\net7.0\ref\AuroraBLL.dll
+F:\iti\F pro\Aurora\AuroraBLL\bin\Debug\net7.0\AuroraBLL.deps.json
+F:\iti\F pro\Aurora\AuroraBLL\bin\Debug\net7.0\AuroraBLL.dll
+F:\iti\F pro\Aurora\AuroraBLL\bin\Debug\net7.0\AuroraBLL.pdb
+F:\iti\F pro\Aurora\AuroraBLL\bin\Debug\net7.0\AuroraDAL.dll
+F:\iti\F pro\Aurora\AuroraBLL\bin\Debug\net7.0\AuroraDAL.pdb
+F:\iti\F pro\Aurora\AuroraBLL\obj\Debug\net7.0\AuroraBLL.csproj.AssemblyReference.cache
+F:\iti\F pro\Aurora\AuroraBLL\obj\Debug\net7.0\AuroraBLL.GeneratedMSBuildEditorConfig.editorconfig
+F:\iti\F pro\Aurora\AuroraBLL\obj\Debug\net7.0\AuroraBLL.AssemblyInfoInputs.cache
+F:\iti\F pro\Aurora\AuroraBLL\obj\Debug\net7.0\AuroraBLL.AssemblyInfo.cs
+F:\iti\F pro\Aurora\AuroraBLL\obj\Debug\net7.0\AuroraBLL.csproj.CoreCompileInputs.cache
+F:\iti\F pro\Aurora\AuroraBLL\obj\Debug\net7.0\AuroraBLL.sourcelink.json
+F:\iti\F pro\Aurora\AuroraBLL\obj\Debug\net7.0\AuroraBLL.csproj.CopyComplete
+F:\iti\F pro\Aurora\AuroraBLL\obj\Debug\net7.0\AuroraBLL.dll
+F:\iti\F pro\Aurora\AuroraBLL\obj\Debug\net7.0\refint\AuroraBLL.dll
+F:\iti\F pro\Aurora\AuroraBLL\obj\Debug\net7.0\AuroraBLL.pdb
+F:\iti\F pro\Aurora\AuroraBLL\obj\Debug\net7.0\ref\AuroraBLL.dll
