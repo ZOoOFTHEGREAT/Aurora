@@ -14,7 +14,6 @@ public class PaymentDetail
     public DateTime Date { get; set; }
     public int OrderId {  get; set; }
     public int UserPaymentId { get; set; }
-
     public Order Order { get; set; } = null!;
     public UserPayment UserPayment { get; set; }=null!;
 }

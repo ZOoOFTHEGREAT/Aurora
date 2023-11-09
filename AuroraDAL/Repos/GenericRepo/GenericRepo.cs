@@ -18,6 +18,7 @@ public class GenericRepo<TEntity> : IGenericRepo<TEntity> where TEntity : class
     #endregion
 
     #region Generic Crud [ Get All, Get By Id, Add, Update, Delete ] 
+
     public List<TEntity> GetAll() => appDbContext.Set<TEntity>().ToList();
 
     public TEntity? GetById(int id) => appDbContext.Set<TEntity>().Find(id);
@@ -39,6 +40,7 @@ public class GenericRepo<TEntity> : IGenericRepo<TEntity> where TEntity : class
         appDbContext.Set<TEntity>().Remove(entity);
         return entity;
     }
+
     #endregion
 
 }
