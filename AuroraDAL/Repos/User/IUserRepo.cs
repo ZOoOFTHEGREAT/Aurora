@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace AuroraDAL;
 
-public interface IUserRepo:IGenericRepo<User>
+public interface IUserRepo : IGenericRepo<User>
 {
+    User GetUserById(string id);
 }

@@ -8,7 +8,14 @@ namespace AuroraDAL;
 
 public class UserRepo : GenericRepo<User>, IUserRepo
 {
+    #region Inject IUnit Of Work
+    private readonly AppDbContext appDbContext;
+
     public UserRepo(AppDbContext appDbContext) : base(appDbContext)
     {
+        this.appDbContext = appDbContext;
     }
+    #endregion
+    public User GetUserById(string Id) => appDbContext.Set<User>().Find(Id)!;
+
 }

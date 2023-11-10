@@ -17,9 +17,10 @@ public class OrderItemRepo : GenericRepo<OrderItem>, IOrderItemRepo
     }
     #endregion
 
-    #region Get Order Item By Order Id 
-    public OrderItem? GetOrderItemByOrderId(int OrderId) => appDbContext.Set<OrderItem>()
-      .FirstOrDefault(i => i.OrderId == OrderId);
+    #region Get Order Items By Order Id 
+    public List<OrderItem> GetOrderItemByOrderId(int OrderId)
+        => appDbContext.Set<OrderItem>()
+      .Where(i => i.OrderId == OrderId).ToList();
     #endregion
 
 }

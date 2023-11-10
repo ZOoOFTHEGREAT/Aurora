@@ -19,15 +19,10 @@
   <ItemGroup>
     <Folder Include="Dtos\CartDtos\" />
     <Folder Include="Dtos\CartItemDtos\" />
-    <Folder Include="Dtos\UserPaymentDtos\" />
-    <Folder Include="Dtos\UserAddressDtos\" />
     <Folder Include="Dtos\OrderItemDtos\" />
     <Folder Include="Managers\CartItemManager\" />
     <Folder Include="Managers\OrderItemManager\" />
-    <Folder Include="Managers\UserAddressManager\" />
-    <Folder Include="Managers\UserPaymentManager\" />
     <Folder Include="Managers\CartManager\" />
-    <Folder Include="Managers\UserManager\" />
   </ItemGroup>
 
 </Project>

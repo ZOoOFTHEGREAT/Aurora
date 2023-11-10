@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AuroraBLL.Dtos.UserPaymentDtos
+{
+    public class UpdateUserPaymentDto
+    {
+        public int Id { get; set; }
+        public string PaymentType { get; set; } = string.Empty;
+        public string Provider { get; set; } = string.Empty;
+        public int AccountNumber { get; set; }
+    }
+}

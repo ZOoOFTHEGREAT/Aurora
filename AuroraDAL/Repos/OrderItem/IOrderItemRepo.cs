@@ -8,5 +8,5 @@ namespace AuroraDAL;
 
 public interface IOrderItemRepo:IGenericRepo<OrderItem>
 {
-    OrderItem? GetOrderItemByOrderId(int OrderId);
+    List<OrderItem>? GetOrderItemByOrderId(int OrderId);
 }
