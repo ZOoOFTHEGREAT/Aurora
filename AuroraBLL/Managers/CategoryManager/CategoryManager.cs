@@ -13,9 +13,9 @@ namespace AuroraBLL.Managers.CategoryManager
 
         #region Inject Of UnitWork
         
-        private readonly UnitOfWork unitOfWork;
+        private readonly IUnitOfWork unitOfWork;
 
-        public CategoryManager(UnitOfWork unitOfWork)
+        public CategoryManager(IUnitOfWork unitOfWork)
         {
             this.unitOfWork = unitOfWork;
         }

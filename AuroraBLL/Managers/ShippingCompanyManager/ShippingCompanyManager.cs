@@ -12,9 +12,9 @@ namespace AuroraBLL.Managers.ShippingCompanyManager
     {
         #region Inject Of UnitWork
 
-        private readonly UnitOfWork unitOfWork;
+        private readonly IUnitOfWork unitOfWork;
 
-        public ShippingCompanyManager(UnitOfWork unitOfWork)
+        public ShippingCompanyManager(IUnitOfWork unitOfWork)
         {
             this.unitOfWork = unitOfWork;
         }

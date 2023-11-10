@@ -12,9 +12,9 @@ namespace AuroraBLL.Managers.PaymentDetailManager
     {
         #region Inject Of UnitWork
 
-        private readonly UnitOfWork unitOfWork;
+        private readonly IUnitOfWork unitOfWork;
 
-        public PaymentDetailManager(UnitOfWork unitOfWork)
+        public PaymentDetailManager(IUnitOfWork unitOfWork)
         {
             this.unitOfWork = unitOfWork;
         }
