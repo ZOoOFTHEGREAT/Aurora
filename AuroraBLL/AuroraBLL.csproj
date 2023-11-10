@@ -16,13 +16,4 @@
     <ProjectReference Include="..\AuroraDAL\AuroraDAL.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Dtos\CartDtos\" />
-    <Folder Include="Dtos\CartItemDtos\" />
-    <Folder Include="Dtos\OrderItemDtos\" />
-    <Folder Include="Managers\CartItemManager\" />
-    <Folder Include="Managers\OrderItemManager\" />
-    <Folder Include="Managers\CartManager\" />
-  </ItemGroup>
-
 </Project>

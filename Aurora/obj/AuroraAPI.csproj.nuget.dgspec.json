@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Desktop\\Project\\Aurora\\Aurora\\AuroraAPI.csproj": {}
+    "C:\\Users\\alyah\\Desktop\\FinalProject\\Aurora\\Aurora\\AuroraAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraBLL\\AuroraBLL.csproj": {
+    "C:\\Users\\alyah\\Desktop\\FinalProject\\Aurora\\AuroraBLL\\AuroraBLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraBLL\\AuroraBLL.csproj",
+        "projectUniqueName": "C:\\Users\\alyah\\Desktop\\FinalProject\\Aurora\\AuroraBLL\\AuroraBLL.csproj",
         "projectName": "AuroraBLL",
-        "projectPath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraBLL\\AuroraBLL.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraBLL\\obj\\",
+        "projectPath": "C:\\Users\\alyah\\Desktop\\FinalProject\\Aurora\\AuroraBLL\\AuroraBLL.csproj",
+        "packagesPath": "C:\\Users\\alyah\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alyah\\Desktop\\FinalProject\\Aurora\\AuroraBLL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\alyah\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\AuroraDAL.csproj": {
-                "projectPath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\AuroraDAL.csproj"
+              "C:\\Users\\alyah\\Desktop\\FinalProject\\Aurora\\AuroraDAL\\AuroraDAL.csproj": {
+                "projectPath": "C:\\Users\\alyah\\Desktop\\FinalProject\\Aurora\\AuroraDAL\\AuroraDAL.csproj"
               }
             }
           }
@@ -81,21 +77,17 @@
         }
       }
     },
-    "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\AuroraDAL.csproj": {
+    "C:\\Users\\alyah\\Desktop\\FinalProject\\Aurora\\AuroraDAL\\AuroraDAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\AuroraDAL.csproj",
+        "projectUniqueName": "C:\\Users\\alyah\\Desktop\\FinalProject\\Aurora\\AuroraDAL\\AuroraDAL.csproj",
         "projectName": "AuroraDAL",
-        "projectPath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\AuroraDAL.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraDAL\\obj\\",
+        "projectPath": "C:\\Users\\alyah\\Desktop\\FinalProject\\Aurora\\AuroraDAL\\AuroraDAL.csproj",
+        "packagesPath": "C:\\Users\\alyah\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alyah\\Desktop\\FinalProject\\Aurora\\AuroraDAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\alyah\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -174,21 +166,17 @@
         }
       }
     },
-    "C:\\Users\\HP\\Desktop\\Project\\Aurora\\Aurora\\AuroraAPI.csproj": {
+    "C:\\Users\\alyah\\Desktop\\FinalProject\\Aurora\\Aurora\\AuroraAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\Aurora\\AuroraAPI.csproj",
+        "projectUniqueName": "C:\\Users\\alyah\\Desktop\\FinalProject\\Aurora\\Aurora\\AuroraAPI.csproj",
         "projectName": "AuroraAPI",
-        "projectPath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\Aurora\\AuroraAPI.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\Aurora\\obj\\",
+        "projectPath": "C:\\Users\\alyah\\Desktop\\FinalProject\\Aurora\\Aurora\\AuroraAPI.csproj",
+        "packagesPath": "C:\\Users\\alyah\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alyah\\Desktop\\FinalProject\\Aurora\\Aurora\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\alyah\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -202,8 +190,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraBLL\\AuroraBLL.csproj": {
-                "projectPath": "C:\\Users\\HP\\Desktop\\Project\\Aurora\\AuroraBLL\\AuroraBLL.csproj"
+              "C:\\Users\\alyah\\Desktop\\FinalProject\\Aurora\\AuroraBLL\\AuroraBLL.csproj": {
+                "projectPath": "C:\\Users\\alyah\\Desktop\\FinalProject\\Aurora\\AuroraBLL\\AuroraBLL.csproj"
               }
             }
           }
