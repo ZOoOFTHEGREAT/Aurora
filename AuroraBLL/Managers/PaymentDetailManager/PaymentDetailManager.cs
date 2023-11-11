@@ -1,4 +1,5 @@
-﻿using AuroraBLL.Dtos.PaymentDetailDtos;
+﻿using AuroraBLL.Dtos.ImageDtos;
+using AuroraBLL.Dtos.PaymentDetailDtos;
 using AuroraDAL;
 using System;
 using System.Collections.Generic;
@@ -69,6 +70,24 @@ namespace AuroraBLL.Managers.PaymentDetailManager
                 Date = x.Date,
                 OrderId = x.OrderId,
             });
+        }
+        #endregion
+
+        #region Add
+        int IPaymentDetailManager.Add(AddPaymentDetailDto paymentdetail)
+        {
+
+            PaymentDetail? newpayment = new PaymentDetail
+            {
+                Amount = paymentdetail.Amount,
+                Status = paymentdetail.Status,
+                OrderId = paymentdetail.OrderId,
+                UserPaymentId = paymentdetail.UserPaymentId,
+                Date = DateTime.Now,
+            };
+
+            unitOfWork.PaymentDetailRepo.Add(newpayment);
+            return unitOfWork.SaveChanges();
         }
         #endregion
     }

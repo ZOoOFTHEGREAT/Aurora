@@ -14,5 +14,7 @@ namespace AuroraBLL.Managers.UserManager
         ReadUserDetailsByIdDto GetUserDetailsById(string id);
         bool IsUpdated(UpdateUserDto user);
         bool IsDeleted(string userid);
+        ReadUserByPhoneNumberDto GetUserByPhoneNumber(string phoneNumber);
+        ReadUserByEmailDto GetUserByEmail(string email);
     }
 }

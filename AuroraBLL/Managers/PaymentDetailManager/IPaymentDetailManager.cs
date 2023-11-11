@@ -1,4 +1,5 @@
-﻿using AuroraBLL.Dtos.PaymentDetailDtos;
+﻿using AuroraBLL.Dtos.ImageDtos;
+using AuroraBLL.Dtos.PaymentDetailDtos;
 using AuroraDAL;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,6 @@ namespace AuroraBLL.Managers.PaymentDetailManager
         public IEnumerable<ReadAllPaymentDetailsDto> GetAllPaymentDetails();
         IEnumerable<ReadPaymentDetailsByOrderIdDto>? GetPaymentDetailByOrderID(int OrderId);
         IEnumerable<ReadPaymentDetailsByUserPaymentDto>? GetPaymentDetailByUserPaymentId(int UserPaymentId);
-
+        int Add(AddPaymentDetailDto paymentdetail);
     }
 }

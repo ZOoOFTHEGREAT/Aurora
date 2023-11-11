@@ -159,5 +159,49 @@ namespace AuroraBLL.Managers.UserManager
             };
         }
         #endregion
+
+        #region Get User By Phone Number
+        public ReadUserByPhoneNumberDto GetUserByPhoneNumber(string phoneNumber)
+        {
+            var userByphonenumber = unitOfWork.UserRepo.GetUSerByPhoneNumber(phoneNumber);
+
+            if (userByphonenumber == null)
+                return null!;
+
+            return new ReadUserByPhoneNumberDto()
+            {
+                Id = userByphonenumber.Id,
+                UserName = userByphonenumber!.UserName!,
+                Fname = userByphonenumber.Fname,
+                Lname = userByphonenumber.Lname,
+                Email = userByphonenumber.Email!,
+                PasswordHash = userByphonenumber.PasswordHash!,
+                PhoneNumber = userByphonenumber.PhoneNumber!,
+                ZipCode = userByphonenumber.ZipCode,
+            };
+        }
+        #endregion
+
+        #region Get User By Email
+        public ReadUserByEmailDto GetUserByEmail(string email)
+        {
+            var userByemail = unitOfWork.UserRepo.GetUSerByEmail(email);
+
+            if (userByemail == null)
+                return null!;
+
+            return new ReadUserByEmailDto()
+            {
+                Id = userByemail.Id,
+                UserName = userByemail!.UserName!,
+                Fname = userByemail.Fname,
+                Lname = userByemail.Lname,
+                Email = userByemail.Email!,
+                PasswordHash = userByemail.PasswordHash!,
+                PhoneNumber = userByemail.PhoneNumber!,
+                ZipCode = userByemail.ZipCode,
+            };
+        }
+        #endregion
     }
 }

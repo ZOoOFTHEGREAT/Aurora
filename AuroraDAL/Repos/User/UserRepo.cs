@@ -18,4 +18,14 @@ public class UserRepo : GenericRepo<User>, IUserRepo
     #endregion
     public User GetUserById(string Id) => appDbContext.Set<User>().Find(Id)!;
 
+    public User? GetUSerByPhoneNumber(string phoneNumber)
+    {
+        User user = (User)appDbContext.Users.Where(x => x.PhoneNumber == phoneNumber);
+        return user;
+    }
+    public User? GetUSerByEmail(string email)
+    {
+        User user = (User)appDbContext.Users.Where(x => x.Email == email);
+        return user;
+    }
 }
