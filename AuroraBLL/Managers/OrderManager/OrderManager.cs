@@ -1,11 +1,15 @@
 ﻿using AuroraBLL.Dtos.ImageDtos;
 using AuroraBLL.Dtos.OrderDtos;
+using AuroraBLL.Dtos.OrderItemDtos;
+using AuroraBLL.Dtos.PaymentDetailDtos;
+using AuroraBLL.Dtos.UserPaymentDtos;
 using AuroraDAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace AuroraBLL.Managers.OrderManager
 {
@@ -34,6 +38,24 @@ namespace AuroraBLL.Managers.OrderManager
             order.AddressId = Ordertobeadded.AddressId;
             order.UserId = Ordertobeadded.UserId;
             order.ShippingCompanyId = Ordertobeadded.ShippingCompanyId;
+            order.OrderItems = Ordertobeadded.OrderItems.Select(orderitems => new OrderItem
+            {
+                Quantity = orderitems.Quantity,
+                OrderId = orderitems.OrderId,
+                ProductId = orderitems.ProductId,
+            }).ToList();
+
+            //update the quantaty of products based on the purchased items
+            foreach(var item in order.OrderItems)
+            {
+                Product? purchasedproduct = _IUnitOfWork.ProductRepo.GetById(item.ProductId);
+                if (purchasedproduct != null) 
+                {
+                    purchasedproduct.Quantity = purchasedproduct.Quantity - item.Quantity;
+                    _IUnitOfWork.ProductRepo.Update(purchasedproduct);
+                }
+            }
+
             _IUnitOfWork.OrderRepo.Add(order);
             _IUnitOfWork.SaveChanges();
             return true;
@@ -91,8 +113,13 @@ namespace AuroraBLL.Managers.OrderManager
                     DeliveryDate = o.DeliveryDate,
                     CreatedAt = o.CreatedAt,
                     ExpectedDelivaryDate = o.ExpectedDelivaryDate,
-                    UserAddress = o.UserAddress,
-                    OrderItems = o.OrderItems,
+                    AddressId = o.AddressId,
+                    OrderItems = o.OrderItems.Select(orderitem => new ReadOrderItemDto
+                    {
+                        Quantity = orderitem.Quantity,
+                        OrderId = orderitem.OrderId,
+                        ProductId = orderitem.ProductId,
+                    }).ToList(),
                 }
             );
         }
@@ -114,8 +141,14 @@ namespace AuroraBLL.Managers.OrderManager
                 DeliveryDate = o.DeliveryDate,
                 CreatedAt = o.CreatedAt,
                 ExpectedDelivaryDate = o.ExpectedDelivaryDate,
-                UserAddress = o.UserAddress,
-                OrderItems = o.OrderItems,
+                AddressId = o.AddressId,
+                ShippingCompanyId = o.ShippingCompanyId,
+                OrderItems = o.OrderItems.Select(orderitem => new ReadOrderItemDto
+                {
+                    Quantity = orderitem.Quantity,
+                    OrderId = orderitem.OrderId,
+                    ProductId = orderitem.ProductId,
+                }).ToList(),
             }
             );
         }
@@ -136,11 +169,23 @@ namespace AuroraBLL.Managers.OrderManager
             ordertoreturn.DeliveryDate = orderfromdb.DeliveryDate;
             ordertoreturn.CreatedAt = orderfromdb.CreatedAt;
             ordertoreturn.ExpectedDelivaryDate = orderfromdb.ExpectedDelivaryDate;
-            ordertoreturn.User = orderfromdb.User;
-            ordertoreturn.ShippingCompany = orderfromdb.ShippingCompany;
-            ordertoreturn.UserAddress = orderfromdb.UserAddress;
-            ordertoreturn.OrderItems = orderfromdb.OrderItems;
-            ordertoreturn.PaymentDetails = orderfromdb.PaymentDetails;
+            ordertoreturn.UserId = orderfromdb.UserId;
+            ordertoreturn.ShippingCompanyId = orderfromdb.ShippingCompanyId;
+            ordertoreturn.AddressId = orderfromdb.AddressId;
+            ordertoreturn.OrderItems = orderfromdb.OrderItems.Select(orderitem => new ReadOrderItemDto
+            {
+                Quantity = orderitem.Quantity,
+                OrderId = orderitem.OrderId,
+                ProductId = orderitem.ProductId,
+            }).ToList();
+            ordertoreturn.PaymentDetails = orderfromdb.PaymentDetails.Select(payment => new ReadPaymentDetailsDto
+            {
+               Amount = payment.Amount,
+               Status = payment.Status,
+               Date = payment.Date,
+               OrderId = payment.OrderId,
+               UserPaymentId = payment.UserPaymentId,
+            }).ToList();
             return ordertoreturn;
     }
         #endregion

@@ -10,5 +10,7 @@ namespace AuroraBLL.Dtos.ShippingCompanyDtos
     {
         public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
+        public int NumberOfOrders { get; set; }
+
     }
 }

@@ -13,5 +13,6 @@ namespace AuroraBLL.Dtos.UserAddressDtos
         public string? LineTwo { get; set; }
         public string Country { get; set; } = string.Empty;
         public string City { get; set; } = string.Empty;
+        public string UserId { get; set; } = string.Empty;
     }
 }

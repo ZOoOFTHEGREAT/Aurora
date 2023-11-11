@@ -8,7 +8,6 @@ namespace AuroraBLL.Dtos.ShippingCompanyDtos
 {
     public class AddShippingCompanyDto
     {
-        public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
         public decimal ServicePrice { get; set; }
         public string WebSite { get; set; } = string.Empty;

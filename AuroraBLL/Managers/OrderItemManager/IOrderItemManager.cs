@@ -11,8 +11,7 @@ namespace AuroraBLL.Managers.OrderItemManager
 {
    public interface IOrderItemManager
     {
-        IEnumerable<ReadOrderItemDto>? GetOrderItemsByOrderId(int orderid);
-        ReadOrderItemDetailDto? GetOrderItemDetailDto(int id);
+        IEnumerable<ReadOrderItemsByOrderIdDto>? GetOrderItemsByOrderId(int orderid);
         int AddOrderItem(AddOrderItemDto addOrderItem);
         bool UpdateOrderItem(UpdateOrderItemDto updateOrderItemDto);
         bool DeleteOrderItem(int id);

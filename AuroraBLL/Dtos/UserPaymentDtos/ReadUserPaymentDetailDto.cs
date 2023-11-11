@@ -1,4 +1,5 @@
-﻿using AuroraDAL;
+﻿using AuroraBLL.Dtos.PaymentDetailDtos;
+using AuroraDAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +14,9 @@ namespace AuroraBLL.Dtos.UserPaymentDtos
         public string PaymentType { get; set; } = string.Empty;
         public string Provider { get; set; } = string.Empty;
         public int AccountNumber { get; set; }
-        public DateTime ExpireDate { get; set; }
+        public DateOnly ExpireDate { get; set; }
         public string UserId { get; set; } = string.Empty;
-        public User User { get; set; } = null!;
         //PaymentDetailDto needed
-        public ICollection<PaymentDetail> PaymentDetails = new List<PaymentDetail>();
+        public ICollection<ReadPaymentDetailsDto> PaymentDetails = new List<ReadPaymentDetailsDto>();
     }
 }

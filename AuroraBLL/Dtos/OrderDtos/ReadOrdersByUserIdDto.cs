@@ -1,4 +1,6 @@
-﻿using AuroraDAL;
+﻿using AuroraBLL.Dtos.OrderItemDtos;
+using AuroraBLL.Dtos.UserPaymentDtos;
+using AuroraDAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,9 +18,9 @@ namespace AuroraBLL.Dtos.OrderDtos
         public DateTime CreatedAt { get; set; }
         public DateTime ExpectedDelivaryDate { get; set; }
 
-        public ShippingCompany ShippingCompany { get; set; } = null!;
-        public UserAddress UserAddress { get; set; } = null!;
-        public virtual ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
-        public virtual ICollection<PaymentDetail> PaymentDetails { get; set; } = new List<PaymentDetail>();
+        public int? ShippingCompanyId { get; set; }
+        public int? AddressId { get; set; }
+        public virtual ICollection<ReadOrderItemDto> OrderItems { get; set; } = new List<ReadOrderItemDto>();
+        public virtual ICollection<ReadUserPaymentDetailDto> PaymentDetails { get; set; } = new List<ReadUserPaymentDetailDto>();
     }
 }

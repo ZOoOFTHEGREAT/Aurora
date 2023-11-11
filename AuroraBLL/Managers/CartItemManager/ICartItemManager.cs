@@ -9,7 +9,7 @@ namespace AuroraBLL.Managers.CartItemManager
 {
     public interface ICartItemManager
     {
-        IEnumerable<ReadCartItemDto> GetAll();
+        IEnumerable<ReadCartItemDto>? GetCartItemsByCartId(int cartid);
         ReadCartItemDetailDto? readCartItemDetailDto(int id);
         public int AddCartItem(AddCartItemDto cartItemAdd);
         public bool Update(UpdateCartItemDto cartItemUpdate);

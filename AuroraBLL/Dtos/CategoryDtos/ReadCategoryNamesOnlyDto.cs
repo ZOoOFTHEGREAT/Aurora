@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AuroraBLL.Dtos.ProductDtos
+namespace AuroraBLL.Dtos.CategoryDtos
 {
-    public class ProductDeleteDto
+    public class ReadCategoryNamesOnlyDto
     {
-       
+        public string Name { get; set; } = string.Empty;
     }
 }

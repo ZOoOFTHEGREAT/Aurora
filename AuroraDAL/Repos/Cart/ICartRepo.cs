@@ -8,5 +8,5 @@ namespace AuroraDAL;
 
 public interface ICartRepo:IGenericRepo<Cart>
 {
-    List<Cart>? GetCartByUserId(string id);
+    Cart? GetCartByUserId(string id);
 }

@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace AuroraBLL.Dtos.PaymentDetailDtos
 {
-    public class ReadPaymentDetailsByOrderIdDto
+    public class ReadPaymentDetailsDto
     {
-        public int Id { get; set; }
         public decimal Amount { get; set; }
         public bool Status { get; set; }
         public DateTime Date { get; set; }
+        public int OrderId { get; set; }
         public int UserPaymentId { get; set; }
     }
 }

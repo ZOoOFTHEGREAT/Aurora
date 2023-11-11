@@ -1,4 +1,5 @@
-﻿using AuroraDAL;
+﻿using AuroraBLL.Dtos.OrderItemDtos;
+using AuroraDAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,14 +11,11 @@ namespace AuroraBLL.Dtos.OrderDtos
     public class OrderAddDto
     {
         public decimal TotalPrice { get; set; }
-        public bool Status { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime ExpectedDelivaryDate { get; set; }
-
 
         public string UserId { get; set; } = string.Empty;
-
         public int? ShippingCompanyId { get; set; }
         public int? AddressId { get; set; }
+
+        public virtual ICollection<ReadOrderItemDto> OrderItems { get; set; } = new List<ReadOrderItemDto>();
     }
 }

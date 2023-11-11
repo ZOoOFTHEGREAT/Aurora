@@ -49,7 +49,7 @@ namespace AuroraBLL.Managers.PaymentDetailManager
                 Amount = x.Amount,
                 Status = x.Status,
                 Date = x.Date,
-                OrderId = x.OrderId,
+                UserPaymentId = x.UserPaymentId,
             });
 
         }
@@ -67,7 +67,7 @@ namespace AuroraBLL.Managers.PaymentDetailManager
                 Amount = x.Amount,
                 Status = x.Status,
                 Date = x.Date,
-                UserPaymentId= x.UserPaymentId,
+                OrderId = x.OrderId,
             });
         }
         #endregion

@@ -12,8 +12,10 @@ namespace AuroraBLL.Managers.CategoryManager
     {
         int AddCategory(AddCategoryDto category);
         IEnumerable<ReadCategoriesDto> GetCategories();
+        IEnumerable<ReadCategoryNamesOnlyDto> GetCategoriesNames();
         ReadCategoryDetailsDto? GetCategoryDetails(int CategoryId);
         bool UpdateCategory(UpdateCategoryDto category);
+        bool DeleteCategory(int id);
 
     }
 }

@@ -1,6 +1,4 @@
-﻿using AuroraBLL.Dtos.CartItemDtos;
-using AuroraBLL.Dtos.ProductDtos;
-using AuroraDAL;
+﻿using AuroraDAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,9 +10,7 @@ namespace AuroraBLL.Dtos.OrderItemDtos
     public class ReadOrderItemDto
     {
         public int Quantity { get; set; }
-        public int? ProductId { get; set; }
-        public Product Product { get; set; } = null!;
-
-
+        public int OrderId { get; set; }
+        public int ProductId { get; set; }
     }
 }

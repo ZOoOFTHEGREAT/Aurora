@@ -11,5 +11,7 @@ namespace AuroraBLL.Dtos.UserPaymentDtos
         public string PaymentType { get; set; } = string.Empty;
         public string Provider { get; set; } = string.Empty;
         public int AccountNumber { get; set; }
+        public DateOnly ExpireDate { get; set; }
+        public string UserId { get; set; } = string.Empty;
     }
 }

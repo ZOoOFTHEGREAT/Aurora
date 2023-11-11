@@ -13,7 +13,7 @@ namespace AuroraBLL.Managers.CartManager
     public interface ICartManager
     {
         IEnumerable<ReadCartDto> GetAll();
-        ReadCartDetailDto? GetCartById(int id);
+        ReadCartDetailDto? GetCartByUserId(string userid);
         int AddCart(AddCartDto addCartDto);
         bool UpdateCart(UpdateCartDto updateCartDto);
         bool DeleteCart(int id);

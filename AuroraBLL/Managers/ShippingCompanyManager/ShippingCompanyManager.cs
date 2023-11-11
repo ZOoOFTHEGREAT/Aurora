@@ -1,4 +1,5 @@
-﻿using AuroraBLL.Dtos.ShippingCompanyDtos;
+﻿using AuroraBLL.Dtos.ImageDtos;
+using AuroraBLL.Dtos.ShippingCompanyDtos;
 using AuroraDAL;
 using System;
 using System.Collections.Generic;
@@ -44,6 +45,7 @@ namespace AuroraBLL.Managers.ShippingCompanyManager
             {
                 Id = x.Id,
                 Name = x.Name,
+                NumberOfOrders = x.Orders.Count,
             });
             return shippingCompanies;
         }
@@ -55,7 +57,6 @@ namespace AuroraBLL.Managers.ShippingCompanyManager
         {
             IEnumerable<ReadShippingCompaniesDetailsDto> shippingCompaniesWithDetails = unitOfWork.ShippingCompanyRepo.GetAll().Select(x => new ReadShippingCompaniesDetailsDto
             {
-                Id = x.Id,
                 Name = x.Name,
                 ServicePrice = x.ServicePrice,
                 WebSite = x.WebSite,
@@ -68,14 +69,34 @@ namespace AuroraBLL.Managers.ShippingCompanyManager
         #endregion
 
         #region Delete Shipping Company
-        public bool IsDeleted(DeleteShippingCompanyDto shippingCompany)
+        public bool IsDeleted(int ShippingCompanyId)
         {
-            ShippingCompany? ShippingCompany = unitOfWork.ShippingCompanyRepo.GetById(shippingCompany.Id);
+            ShippingCompany? ShippingCompany = unitOfWork.ShippingCompanyRepo.GetById(ShippingCompanyId);
             if (ShippingCompany == null) { return false; }
             unitOfWork.ShippingCompanyRepo.Delete(ShippingCompany);
             return unitOfWork.SaveChanges() > 0;
         }
 
+        #endregion
+
+        #region Update
+
+        public bool Update(UpdateShippinCompanyDto ShippingCompany)
+        {
+            ShippingCompany? shippingcompanytobeupdated = unitOfWork.ShippingCompanyRepo.GetById(ShippingCompany.Id);
+            if (shippingcompanytobeupdated == null)
+            {
+
+                return false;
+            }
+            shippingcompanytobeupdated.ServicePrice = ShippingCompany.ServicePrice;
+            shippingcompanytobeupdated.WebSite = ShippingCompany.WebSite;
+            shippingcompanytobeupdated.Telephone = ShippingCompany.Telephone;
+
+            unitOfWork.ShippingCompanyRepo.Update(shippingcompanytobeupdated);
+            unitOfWork.SaveChanges();
+            return true;
+        }
         #endregion
 
     }

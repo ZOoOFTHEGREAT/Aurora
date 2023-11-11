@@ -1,4 +1,5 @@
-﻿using AuroraDAL;
+﻿using AuroraBLL.Dtos.CartItemDtos;
+using AuroraDAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,6 @@ namespace AuroraBLL.Dtos.CartDtos
     public class UpdateCartDto
     {
         public int Id { get; set; }
-        public DateTime CreatedDate { get; set; }
-        public string UserId { get; set; } = string.Empty;
+        public virtual ICollection<CartItem> CartItems { get; set; } = new List<CartItem>();
     }
 }

@@ -17,7 +17,5 @@ namespace AuroraBLL.Dtos.UserAddressDtos
         public string Country { get; set; } = string.Empty;
         public string City    { get; set; } = string.Empty;
         public string UserId { get; set; } = string.Empty;
-        public User User { get; set; } = null!;
-        public virtual ICollection<ReadOrderDto> OrdersDto { get; set; } = new List<ReadOrderDto>();
     }
 }

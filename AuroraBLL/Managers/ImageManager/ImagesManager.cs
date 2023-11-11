@@ -61,9 +61,9 @@ namespace AuroraBLL.Managers.ImageManager
         #endregion
 
         #region Delete
-        public bool Delete(ImageDeleteDto image)
+        public bool Delete(int imageid)
         {
-            Image? imagetobedeleted = _IUnitOfWork.ImageRepo.GetById(image.Id);
+            Image? imagetobedeleted = _IUnitOfWork.ImageRepo.GetById(imageid);
             if (imagetobedeleted == null) 
             {
                 return false;

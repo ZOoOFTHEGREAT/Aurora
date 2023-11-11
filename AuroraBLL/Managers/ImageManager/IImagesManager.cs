@@ -13,6 +13,6 @@ namespace AuroraBLL.Managers.ImageManager
         IEnumerable<ImagesReadByProductIdDto> GetImagesByProductId(int ProductId);
         bool Add(ImageAddDto image);
         bool Update(ImageUpdateDto image);
-        bool Delete(ImageDeleteDto image);
+        bool Delete(int iamgeid);
     }
 }

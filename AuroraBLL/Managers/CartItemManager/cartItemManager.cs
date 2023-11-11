@@ -47,16 +47,14 @@ namespace AuroraBLL.Managers.CartItemManager
         #endregion
 
         #region Read data
-        public IEnumerable<ReadCartItemDto> GetAll()
+        public IEnumerable<ReadCartItemDto>? GetCartItemsByCartId(int cartid)
         {
-            IEnumerable<CartItem> CartItemFromDb = unitOfWork.CartItemRepo.GetAll();
-            return CartItemFromDb.Select(x => new ReadCartItemDto
+            IEnumerable<CartItem>? CartItemsFromDb = unitOfWork.CartItemRepo.GetCartItemByCartId(cartid);
+            if(CartItemsFromDb == null) { return null; }
+            return CartItemsFromDb.Select(x => new ReadCartItemDto
             {
-                 Id = x.Id,
                  Quantity = x.Quantity,
-                 CartId = x.CartId,
                  ProductId = x.ProductId,
-
             }
             );
         }
@@ -72,14 +70,8 @@ namespace AuroraBLL.Managers.CartItemManager
             }
             return new ReadCartItemDetailDto
             {
-                Id = cartItemRepo.Id,
                 Quantity = cartItemRepo.Quantity,
-                CartId = cartItemRepo.CartId,
-                ProductId = cartItemRepo.ProductId,
-                //Check
-                Product =new Product() { Name = cartItemRepo.Product.Name },
-
-                
+                ProductId = cartItemRepo.ProductId,               
             };
         }
         #endregion region
@@ -90,12 +82,11 @@ namespace AuroraBLL.Managers.CartItemManager
             CartItem? ItemUpdate = unitOfWork.CartItemRepo.GetById(cartItemUpdate.Id);
             if (ItemUpdate == null) { return false; }
 
-            ItemUpdate.Id = cartItemUpdate.Id;
             ItemUpdate.Quantity = cartItemUpdate.Quantity;
-            ItemUpdate.ProductId = cartItemUpdate.ProductId;
             unitOfWork.CartItemRepo.Update(ItemUpdate);
-     
-            return unitOfWork.SaveChanges() > 0 ;
+            unitOfWork.SaveChanges();
+
+            return true  ;
         }
     }
     #endregion

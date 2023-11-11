@@ -1,4 +1,5 @@
-﻿using AuroraBLL.Dtos.ShippingCompanyDtos;
+﻿using AuroraBLL.Dtos.ImageDtos;
+using AuroraBLL.Dtos.ShippingCompanyDtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,9 @@ namespace AuroraBLL.Managers.ShippingCompanyManager
     public interface IShippingCompanyManager
     {
         int AddShippingCompany(AddShippingCompanyDto ShippingCompany);
-        bool IsDeleted(DeleteShippingCompanyDto ShippingCompany);
+        bool IsDeleted(int ShippingCompanyId);
+        bool Update(UpdateShippinCompanyDto ShippingCompany);
+
         IEnumerable<ReadShippingCompaniesDto> GetAllShippingCompany();
         IEnumerable<ReadShippingCompaniesDetailsDto> GetAllShippingCompanyDetails();
 

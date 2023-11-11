@@ -17,8 +17,8 @@ namespace AuroraBLL.Dtos.UserDtos
         public string PhoneNumber { get; set; } = string.Empty;
         public int ZipCode { get; set; }
         public Cart Cart { get; set; } = null!;
-        public virtual ICollection<ReadOrderDto> OrderDtos { get; set; } = new List<ReadOrderDto>();
-        public virtual ICollection<ReadUserPaymentDto> UserPaymentDtos { get; set; } = new List<ReadUserPaymentDto>();
-        public virtual ICollection<ReadUserAddressDto> UserAddressesDtos { get; set; } = new List<ReadUserAddressDto>();
+        public virtual ICollection<ReadOrdersDto> Orders { get; set; } = new List<ReadOrdersDto>();
+        public virtual ICollection<ReadUserPaymentDetailDto> UserPayments { get; set; } = new List<ReadUserPaymentDetailDto>();
+        public virtual ICollection<ReadUserAddressDetailDto> UserAddresses { get; set; } = new List<ReadUserAddressDetailDto>();
     }
 }

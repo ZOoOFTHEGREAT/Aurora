@@ -28,9 +28,8 @@ namespace AuroraBLL.Managers.CartManager
         {
             Cart cartRequested = new Cart()
             {
-                CreatedDate = addCartDto.CreatedDate,
+                CreatedDate = DateTime.Now,
                 UserId = addCartDto.UserId,
-                User = addCartDto.User,
             };
             unitOfWork.CartRepo.Add(cartRequested);
             return unitOfWork.SaveChanges();
@@ -66,22 +65,19 @@ namespace AuroraBLL.Managers.CartManager
         #endregion
 
         #region Read Cart Details
-        public ReadCartDetailDto? GetCartById(int id)
+        public ReadCartDetailDto? GetCartByUserId(string userid)
         {
-            Cart? cartRepo = unitOfWork.CartRepo.GetById(id);
+            Cart? cartRepo = unitOfWork.CartRepo.GetCartByUserId(userid);
             if (cartRepo == null)
             {
                 return null;
             }
             return new ReadCartDetailDto
             {
-                Id = id,
                 CreatedDate = cartRepo.CreatedDate,
-                UserId = cartRepo.UserId,
-                CartItems = cartRepo.CartItems.Select(x => new ReadCartItemDto {
+                CartItems = cartRepo.CartItems.Select(x => new ReadCartItemDetailDto
+                {
                     Quantity = x.Quantity,
-
-
                 }).ToList(),
 
             };
@@ -95,8 +91,7 @@ namespace AuroraBLL.Managers.CartManager
             Cart? cartUpdate = unitOfWork.CartRepo.GetById(updateCartDto.Id);
             if (cartUpdate == null) { return false; }
 
-            cartUpdate.CreatedDate = updateCartDto.CreatedDate;
-            cartUpdate.UserId = updateCartDto.UserId;
+            cartUpdate.CartItems = updateCartDto.CartItems;
             unitOfWork.CartRepo.Update(cartUpdate);
             unitOfWork.SaveChanges();
             return true;

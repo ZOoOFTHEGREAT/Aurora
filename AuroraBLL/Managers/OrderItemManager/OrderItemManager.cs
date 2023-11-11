@@ -1,6 +1,7 @@
 ﻿using AuroraBLL.Dtos;
 using AuroraBLL.Dtos.CartDtos;
 using AuroraBLL.Dtos.CartItemDtos;
+using AuroraBLL.Dtos.ImageDtos;
 using AuroraBLL.Dtos.OrderItemDtos;
 using AuroraBLL.Dtos.ShippingCompanyDtos;
 using AuroraDAL;
@@ -29,7 +30,7 @@ namespace AuroraBLL.Managers.OrderItemManager
         {
             OrderItem OrderItemRequested = new OrderItem()
             {
-                Id = addOrderItem.Id,
+                OrderId = addOrderItem.OrderId,
                 Quantity = addOrderItem.Quantity,
                 ProductId = addOrderItem.ProductId,
   
@@ -50,40 +51,20 @@ namespace AuroraBLL.Managers.OrderItemManager
         }
         #endregion
 
-        #region Read order Item 
-        public IEnumerable<ReadOrderItemDto>? GetOrderItemsByOrderId(int orderid)
+        #region Read order Items By Order Id 
+        public IEnumerable<ReadOrderItemsByOrderIdDto>? GetOrderItemsByOrderId(int orderid)
         {
-            IEnumerable<ReadOrderItemDto> OrderItems = unitOfWork.OrderItemRepo.GetOrderItemByOrderId(orderid).Select(x => new ReadOrderItemDto
+            IEnumerable<OrderItem>? orderItems = unitOfWork.OrderItemRepo.GetOrderItemByOrderId(orderid);
+            if (orderItems == null)
             {
-                Quantity = x.Quantity,
-                ProductId = x.ProductId,
-                Product = new Product() { Name = x.Product.Name },
-
-            }).ToList();
-            return OrderItems;
-
-
-        }
-        #endregion
-
-        #region Read Order Details
-        public ReadOrderItemDetailDto? GetOrderItemDetailDto(int id)
-        {
-            OrderItem? OrderItem = unitOfWork.OrderItemRepo.GetById(id);
-            if (OrderItem == null)
-            {
-                return null;
+                return Enumerable.Empty<ReadOrderItemsByOrderIdDto>();
             }
-            return new ReadOrderItemDetailDto
+            return orderItems.Select(OT => new ReadOrderItemsByOrderIdDto
             {
-               Id = OrderItem.Id, ProductId = OrderItem.ProductId,
-               Quantity = OrderItem.Quantity,
-               OrderId = OrderItem.OrderId,
-               //Check
-               Product = new Product() { Name = OrderItem.Product.Name },
-
-            };
-        }
+                Quantity = OT.Quantity,
+                ProductId = OT.ProductId,
+            });
+         }
         #endregion
 
         #region Update Order Item
@@ -93,7 +74,6 @@ namespace AuroraBLL.Managers.OrderItemManager
             if (orderItemUpdate == null) { return false; }
 
            orderItemUpdate.Quantity = updateOrderItemDto.Quantity;
-            orderItemUpdate.ProductId = updateOrderItemDto.ProductId;
             unitOfWork.OrderItemRepo.Update(orderItemUpdate);
             unitOfWork.SaveChanges();
             return true;

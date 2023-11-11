@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace AuroraBLL.Dtos.ImageDtos
 {
-    public class ImageDeleteDto
+    public class ReadImageDto
     {
-        public int Id { get; set; }
+        public string ImageUrl { get; set; } = string.Empty;
+        public int? ProductId { get; set; }
     }
 }

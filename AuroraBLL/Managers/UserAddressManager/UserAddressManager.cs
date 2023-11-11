@@ -1,4 +1,5 @@
-﻿using AuroraBLL.Dtos.OrderDtos;
+﻿using AuroraBLL.Dtos.ImageDtos;
+using AuroraBLL.Dtos.OrderDtos;
 using AuroraBLL.Dtos.UserAddressDtos;
 using AuroraDAL;
 using System;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace AuroraBLL.Managers.UserAddressManager
 {
@@ -25,7 +27,7 @@ namespace AuroraBLL.Managers.UserAddressManager
 
         #endregion
 
-        #region Add , GetAll , GetById , Delete , Update , GetAddressByUserId
+        #region Add 
         public int Add(AddUserAddressDto addUserAddressDto)
         {
             if (addUserAddressDto == null)
@@ -36,67 +38,30 @@ namespace AuroraBLL.Managers.UserAddressManager
                 LineOne = addUserAddressDto.LineOne,
                 LineTwo = addUserAddressDto.LineTwo,
                 Country = addUserAddressDto.Country,
-                City = addUserAddressDto.City
+                City = addUserAddressDto.City,
+                UserId = addUserAddressDto.UserId,
             };
             unitOfWork.UserAddressRepo.Add(userAddress);
             unitOfWork.SaveChanges();
-            return userAddress.Id;         
+            return userAddress.Id;
         }
-        public ReadUserAddresByUserIdDto GetAddressByUserId(string userId)
-        {
-            if (userId == "")
-                return null!;
-            var userAddress = unitOfWork.UserAddressRepo.GetUserAddresByUserId(userId);
-            if (userAddress == null)
-                return null!;
-            return new ReadUserAddresByUserIdDto
-            {
-                Address = userAddress.Address,
-                LineOne = userAddress.LineOne,
-                LineTwo = userAddress.LineTwo,
-                Country = userAddress.Country,
-                City = userAddress.City
-            };
-        }
-        public List<ReadUserAddressDto> GetAll()
-        {
-            var userAddresses =unitOfWork.UserAddressRepo.GetAll();
-            if (userAddresses == null)
-                return null!;
-            return userAddresses.Select(i => new ReadUserAddressDto
-            {
-                Address = i.Address,
-                LineOne = i.LineOne,
-                LineTwo = i.LineTwo,
-                Country = i.Country,
-                City = i.City
-            }).ToList();            
-        }
-        public ReadUserAddressDetailDto GetById(ReadUserAddressDetailDto readUserAddressDetailDto)
-        {
-            if (readUserAddressDetailDto == null)
-                return null!;
+        #endregion
 
-            var userAddress = unitOfWork.UserAddressRepo.GetById(readUserAddressDetailDto.Id);
-            if (userAddress == null)
-                return null!;
-
-            return new ReadUserAddressDetailDto
+        #region Delete
+        public bool IsDeleted(int addressId)
+        {
+            UserAddress? AddressToBeDeleted = unitOfWork.UserAddressRepo.GetById(addressId);
+            if (AddressToBeDeleted == null)
             {
-                Address = userAddress.Address,
-                LineOne = userAddress.LineOne,
-                LineTwo = userAddress.LineTwo,
-                Country = userAddress.Country,
-                City = userAddress.City,
-                OrdersDto = userAddress.Orders.Select(i => new ReadOrderDto
-                {
-                    CreatedAt = i.CreatedAt,
-                    TotalPrice = i.TotalPrice,
-                    Status = i.Status,
-                    DeliveryDate = i.DeliveryDate
-                }).ToList()
-            };
+                return false;
+            }
+            unitOfWork.UserAddressRepo.Delete(AddressToBeDeleted);
+            unitOfWork.SaveChanges();
+            return true;
         }
+        #endregion
+
+        #region Update
         public bool IsUpdated(UpdateUserAddressDto updateUserAddressDto)
         {
             if (updateUserAddressDto == null)
@@ -114,18 +79,47 @@ namespace AuroraBLL.Managers.UserAddressManager
             unitOfWork.SaveChanges();
             return true;
         }
-        public bool IsDeleted(DeleteUserAddressDto deleteUserAddressDto)
+        #endregion
+
+        #region Get By Id
+        public ReadUserAddressDetailDto GetById(ReadUserAddressDetailDto readUserAddressDetailDto)
         {
-            if (deleteUserAddressDto == null)
-                return false;
-            var userAddress = unitOfWork.UserAddressRepo.GetById(deleteUserAddressDto.Id);
+            if (readUserAddressDetailDto == null)
+                return null!;
+
+            var userAddress = unitOfWork.UserAddressRepo.GetById(readUserAddressDetailDto.Id);
             if (userAddress == null)
-                return false;
-            unitOfWork.UserAddressRepo.Delete(userAddress);
-            unitOfWork.SaveChanges();
-            return true;
+                return null!;
+
+            return new ReadUserAddressDetailDto
+            {
+                Address = userAddress.Address,
+                LineOne = userAddress.LineOne,
+                LineTwo = userAddress.LineTwo,
+                Country = userAddress.Country,
+                City = userAddress.City,
+                UserId = userAddress.UserId,
+            };
         }
         #endregion
 
+        #region Get By User Id
+        public IEnumerable<ReadUserAddresByUserIdDto> GetAddressByUserId(string userId)
+        {
+            IEnumerable<UserAddress>? Addressesfromdb = unitOfWork.UserAddressRepo.GetAddressesByUserId(userId);
+            if (Addressesfromdb == null)
+            {
+                return Enumerable.Empty<ReadUserAddresByUserIdDto>();
+            }
+            return Addressesfromdb.Select(I => new ReadUserAddresByUserIdDto
+            {
+                Address = I.Address,
+                LineOne = I.LineOne,
+                LineTwo = I.LineTwo,
+                Country = I.Country,
+                City = I.City
+            });
+        }
+        #endregion
     }
 }

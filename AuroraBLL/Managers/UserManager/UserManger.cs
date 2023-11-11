@@ -1,4 +1,6 @@
 ﻿using AuroraBLL.Dtos.OrderDtos;
+using AuroraBLL.Dtos.OrderItemDtos;
+using AuroraBLL.Dtos.PaymentDetailDtos;
 using AuroraBLL.Dtos.UserAddressDtos;
 using AuroraBLL.Dtos.UserDtos;
 using AuroraBLL.Dtos.UserPaymentDtos;
@@ -19,114 +21,28 @@ namespace AuroraBLL.Managers.UserManager
         }
         #endregion
 
-        #region Add GetAllUser GetAllUsers GetUserById GetUserDetailsById UpdateUser IsDeleted
+        #region Add 
         public int Add(AddUserDto user)
         {
             User usr = new()
             {
                 UserName = user.UserName,
-                Email=user.Email,
-                Fname=user.Fname,
-                Lname=user.Lname,
-                PhoneNumber=user.PhoneNumber,
-                ZipCode=user.ZipCode,
-                PasswordHash=user.PasswordHash
+                Email = user.Email,
+                Fname = user.Fname,
+                Lname = user.Lname,
+                PhoneNumber = user.PhoneNumber,
+                ZipCode = user.ZipCode,
+                PasswordHash = user.PasswordHash
             };
             unitOfWork.UserRepo.Add(usr);
             return unitOfWork.SaveChanges();
         }
-        
-        public List<ReadAllUserDto> GetAllUsers()
-        {
-            var user = unitOfWork.UserRepo.GetAll();
+        #endregion
 
-            if (user == null)
-            {
-                return null!;
-            }
-
-            return  user.Select(i => new ReadAllUserDto
-            {
-                Id=i.Id,
-                UserName =i.UserName!,
-                PhoneNumber = i.PhoneNumber!,
-                Email=i.Email!,
-                PasswordHash=i.PasswordHash!,
-                ZipCode=i.ZipCode,
-                Fname=i.Fname,
-                Lname=i.Lname
-            }).ToList();
-        }
-
-        public ReadUserByIdDto GetUserById(string id)
-        {
-            if (id == "")
-                return null!;
-
-            var userById = unitOfWork.UserRepo.GetUserById(id);
-
-            if (userById == null)
-                return null!;
-            
-            return new ReadUserByIdDto()
-            {
-                UserName = userById!.UserName!,
-                Fname = userById.Fname,
-                Lname = userById.Lname,
-                Email = userById.Email!,
-                PasswordHash = userById.PasswordHash!,
-                PhoneNumber = userById.PhoneNumber!,
-                ZipCode = userById.ZipCode,
-            };
-        }
-
-        public ReadUserDetailsByIdDto GetUserDetailsById(string id)
-        {
-            if (id == "")
-                return null!;
-            var userDetails = unitOfWork.UserRepo.GetUserById(id);
-            if (userDetails == null)
-                return null!;
-
-            return new ReadUserDetailsByIdDto
-            {
-                UserName = userDetails.UserName!,
-                Fname = userDetails.Fname!,
-                Lname = userDetails.Lname,
-                Email = userDetails.Email!,
-                PasswordHash = userDetails.PasswordHash!,
-                PhoneNumber = userDetails.PhoneNumber!,
-                ZipCode = userDetails.ZipCode,
-                OrderDtos = userDetails.Orders.Select(i => new ReadOrderDto
-                {
-                    TotalPrice = i.TotalPrice,
-                    Status = i.Status,
-                    DeliveryDate = i.DeliveryDate,
-                    CreatedAt = i.CreatedAt,
-                    ExpectedDelivaryDate = i.ExpectedDelivaryDate
-                }).ToList(),
-                UserAddressesDtos = userDetails.UserAddresses.Select(i => new ReadUserAddressDto
-                {
-                    Address = i.Address,
-                    LineOne = i.LineOne,
-                    LineTwo = i.LineTwo,
-                    Country = i.Country,
-                    City = i.City,
-                }).ToList(),
-                UserPaymentDtos = userDetails.UserPayments.
-                Select(i => new ReadUserPaymentDto
-                {
-                    PaymentType = i.PaymentType,
-                    Provider = i.Provider,
-                    AccountNumber = i.AccountNumber,
-                    ExpireDate = i.ExpireDate,
-                }).ToList()
-            };
-        }
-
+        #region Update
         public bool IsUpdated(UpdateUserDto userDto)
         {
-            if (userDto == null || userDto.Id=="")
+            if (userDto == null || userDto.Id == "")
                 return false;
 
             var getUser = unitOfWork.UserRepo.GetUserById(userDto.Id);
@@ -144,18 +60,103 @@ namespace AuroraBLL.Managers.UserManager
             unitOfWork.SaveChanges();
             return true;
         }
+        #endregion
 
-        public bool IsDeleted(DeleteUserDto userDto)
+        #region Delete
+        public bool IsDeleted(string userid)
         {
-            if (userDto == null || userDto.Id == "")
-                return false;
-            var getUser = unitOfWork.UserRepo.GetUserById(userDto.Id);
+            var getUser = unitOfWork.UserRepo.GetUserById(userid);
             if (getUser == null)
                 return false;
 
             unitOfWork.UserRepo.Delete(getUser);
             unitOfWork.SaveChanges();
             return true;
+        }
+        #endregion
+
+        #region Get User By Id
+        public ReadUserByIdDto GetUserById(string id)
+        {
+            if (id == "")
+                return null!;
+
+            var userById = unitOfWork.UserRepo.GetUserById(id);
+
+            if (userById == null)
+                return null!;
+
+            return new ReadUserByIdDto()
+            {
+                UserName = userById!.UserName!,
+                Fname = userById.Fname,
+                Lname = userById.Lname,
+                Email = userById.Email!,
+                PasswordHash = userById.PasswordHash!,
+                PhoneNumber = userById.PhoneNumber!,
+                ZipCode = userById.ZipCode,
+            };
+        }
+        #endregion
+
+        #region Get User Details By Id
+        public ReadUserDetailsByIdDto GetUserDetailsById(string id)
+        {
+            if (id == "")
+                return null!;
+            var userDetails = unitOfWork.UserRepo.GetUserById(id);
+            if (userDetails == null)
+                return null!;
+
+            return new ReadUserDetailsByIdDto
+            {
+                UserName = userDetails.UserName!,
+                Fname = userDetails.Fname!,
+                Lname = userDetails.Lname,
+                Email = userDetails.Email!,
+                PasswordHash = userDetails.PasswordHash!,
+                PhoneNumber = userDetails.PhoneNumber!,
+                ZipCode = userDetails.ZipCode,
+                Orders = userDetails.Orders.Select(i => new ReadOrdersDto
+                {
+                    TotalPrice = i.TotalPrice,
+                    Status = i.Status,
+                    DeliveryDate = i.DeliveryDate,
+                    CreatedAt = i.CreatedAt,
+                    ExpectedDelivaryDate = i.ExpectedDelivaryDate,
+                    ShippingCompanyId = i.ShippingCompanyId,
+                    AddressId = i.AddressId,
+                    OrderItems = i.OrderItems.Select(orderitem => new ReadOrderItemDto
+                    {
+                        Quantity = orderitem.Quantity,
+                        OrderId = orderitem.OrderId,
+                        ProductId = orderitem.ProductId,
+                    }).ToList(),
+                    PaymentDetails = i.PaymentDetails.Select(payment => new ReadPaymentDetailsDto
+                    {
+                        Amount = payment.Amount,
+                        Status = payment.Status,
+                        Date = payment.Date,
+                        OrderId = payment.OrderId,
+                        UserPaymentId = payment.UserPaymentId,
+                    }).ToList()
+                }).ToList(),
+                UserAddresses = userDetails.UserAddresses.Select(i => new ReadUserAddressDetailDto
+                {
+                    Address = i.Address,
+                    LineOne = i.LineOne,
+                    LineTwo = i.LineTwo,
+                    Country = i.Country,
+                    City = i.City,
+                }).ToList(),
+                UserPayments = userDetails.UserPayments.Select(i => new ReadUserPaymentDetailDto
+                {
+                    PaymentType = i.PaymentType,
+                    Provider = i.Provider,
+                    AccountNumber = i.AccountNumber,
+                    ExpireDate = i.ExpireDate,
+                }).ToList()
+            };
         }
         #endregion
     }

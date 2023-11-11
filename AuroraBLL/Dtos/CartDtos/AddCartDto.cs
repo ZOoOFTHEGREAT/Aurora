@@ -9,7 +9,5 @@ namespace AuroraBLL.Dtos;
 
 public class AddCartDto
 {
-    public DateTime CreatedDate { get; set; }
     public string UserId { get; set; } = string.Empty;
-    public User User { get; set; } = null!;
 }

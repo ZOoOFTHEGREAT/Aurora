@@ -1,4 +1,5 @@
-﻿using AuroraDAL;
+﻿using AuroraBLL.Dtos.OrderItemDtos;
+using AuroraDAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace AuroraBLL.Dtos.OrderDtos
         public DateTime CreatedAt { get; set; }
         public DateTime ExpectedDelivaryDate { get; set; }
 
-        public UserAddress UserAddress { get; set; } = null!;
-        public virtual ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
+        public int? AddressId { get; set; }
+        public virtual ICollection<ReadOrderItemDto> OrderItems { get; set; } = new List<ReadOrderItemDto>();
     }
 }

@@ -13,6 +13,6 @@ namespace AuroraBLL.Dtos.PaymentDetailDtos
         public decimal Amount { get; set; }
         public bool Status { get; set; }
         public DateTime Date { get; set; }
-        public int UserPaymentId { get; set; }
+        public int OrderId { get; set; }
     }
 }

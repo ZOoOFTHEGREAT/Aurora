@@ -9,7 +9,6 @@ namespace AuroraBLL.Dtos.UserAddressDtos
 {
     public class ReadUserAddresByUserIdDto
     {
-        public string UserId { get; set; } = string.Empty;
         public string Address { get; set; } = string.Empty;
         public string LineOne { get; set; } = string.Empty;
         public string? LineTwo { get; set; }

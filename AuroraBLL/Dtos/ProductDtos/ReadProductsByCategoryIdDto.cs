@@ -1,4 +1,5 @@
-﻿using AuroraDAL;
+﻿using AuroraBLL.Dtos.ImageDtos;
+using AuroraDAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,6 @@ namespace AuroraBLL.Dtos.ProductDtos
         public int Quantity { get; set; }
         public decimal DiscountPercent { get; set; }
         public string Description { get; set; } = string.Empty;
-        public Category Category { get; set; } = null!;
+        public virtual ICollection<ReadImageDto> Images { get; set; } = new List<ReadImageDto>();
     }
 }

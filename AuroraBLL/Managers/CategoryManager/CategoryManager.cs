@@ -1,4 +1,7 @@
-﻿using AuroraBLL.Dtos.CategoryDtos;
+﻿using AuroraBLL.Dtos.CartItemDtos;
+using AuroraBLL.Dtos.CategoryDtos;
+using AuroraBLL.Dtos.ImageDtos;
+using AuroraBLL.Dtos.ProductDtos;
 using AuroraDAL;
 using System;
 using System.Collections.Generic;
@@ -22,14 +25,27 @@ namespace AuroraBLL.Managers.CategoryManager
 
         #endregion
  
-        #region Get Categories Names and IDs
+        #region Get Categories
 
         public IEnumerable<ReadCategoriesDto> GetCategories()
         {
-            IEnumerable<ReadCategoriesDto> Categories = unitOfWork.CategoryRepo.GetAll().Select(x=>new ReadCategoriesDto
+            IEnumerable<ReadCategoriesDto> Categories = unitOfWork.CategoryRepo.GetAll().Select(Category => new ReadCategoriesDto
             {
-                Id = x.Id,
-                Name = x.Name,
+                Name = Category.Name,
+                Description = Category.Description,
+                Products = Category.Products.Select(product => new ReadProductByIdDto
+                {
+                    Name = product.Name ,
+                    Price = product.Price ,
+                    Quantity = product.Quantity ,
+                     DiscountPercent = product.DiscountPercent, 
+                     Description = product.Description ,
+                     CategoryId = product.CategoryId ,
+                    Images = product.Images.Select(image => new ReadImageDto
+                    {
+                        ImageUrl = image.ImageUrl,
+                    }).ToList(),
+                }).ToList(),
             });
             return Categories;
                 
@@ -44,9 +60,21 @@ namespace AuroraBLL.Managers.CategoryManager
                 return null;
             return new ReadCategoryDetailsDto
             {
-                Id = Category.Id,
                 Name = Category.Name,
                 Description = Category.Description,
+                Products = Category.Products.Select(product => new ReadProductByIdDto
+                {
+                    Name = product.Name,
+                    Price = product.Price,
+                    Quantity = product.Quantity,
+                    DiscountPercent = product.DiscountPercent,
+                    Description = product.Description,
+                    CategoryId = product.CategoryId,
+                    Images = product.Images.Select(image => new ReadImageDto 
+                    {
+                        ImageUrl = image.ImageUrl,
+                    }).ToList(),
+                }).ToList(),
             };
         }
         #endregion
@@ -82,6 +110,30 @@ namespace AuroraBLL.Managers.CategoryManager
             
         }
 
+        #endregion
+
+        #region Delete Category
+        public bool DeleteCategory(int id)
+        {
+            Category? categorytobedelted = unitOfWork.CategoryRepo.GetById(id);
+            if (categorytobedelted == null) { return false; }
+            unitOfWork.CategoryRepo.Delete(categorytobedelted);
+            unitOfWork.SaveChanges();
+            return true;
+        }
+        #endregion
+
+        #region Get Categories Names Only
+
+        public IEnumerable<ReadCategoryNamesOnlyDto> GetCategoriesNames()
+        {
+            IEnumerable<ReadCategoryNamesOnlyDto> Categories = unitOfWork.CategoryRepo.GetAll().Select(x => new ReadCategoryNamesOnlyDto
+            {
+                Name = x.Name,
+            });
+            return Categories;
+
+        }
         #endregion
 
     }

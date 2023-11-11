@@ -10,10 +10,8 @@ namespace AuroraBLL.Managers.UserPaymentManager
     public interface IUserPaymentManager
     {
         int Add(AddUserPaymentDto addUserPaymentDto);
-        List<ReadUserPaymentDto> GetAll();
         ReadUserPaymentDetailDto GetById(ReadUserPaymentDetailDto Id);
         ReadUserPaymentByUserIdDto GetUserPaymentByUserId(ReadUserPaymentByUserIdDto readUserPaymentByUserIdDto);
-        bool IsUpdated(UpdateUserPaymentDto updateUserPaymentDto);
-        bool IsDeleted(DeleteUserPaymentDto deleteUserPaymentDto); 
+        bool IsDeleted(int userPaymentId); 
     }
 }

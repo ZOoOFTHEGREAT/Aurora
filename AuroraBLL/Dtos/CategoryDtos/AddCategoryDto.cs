@@ -8,7 +8,6 @@ namespace AuroraBLL.Dtos.CategoryDtos
 {
     public class AddCategoryDto
     {
-        public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
     }

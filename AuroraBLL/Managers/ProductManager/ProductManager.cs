@@ -1,4 +1,5 @@
-﻿using AuroraBLL.Dtos.OrderDtos;
+﻿using AuroraBLL.Dtos.ImageDtos;
+using AuroraBLL.Dtos.OrderDtos;
 using AuroraBLL.Dtos.ProductDtos;
 using AuroraDAL;
 using System;
@@ -33,6 +34,7 @@ namespace AuroraBLL.Managers.ProductManager
             producttoadd.Quantity = product.Quantity;
             producttoadd.Description = product.Description;
             producttoadd.CategoryId = product.CategoryId;
+            producttoadd.DiscountPercent = 0;
 
             _IUnitOfWork.ProductRepo.Add(producttoadd);
             _IUnitOfWork.SaveChanges();
@@ -100,8 +102,11 @@ namespace AuroraBLL.Managers.ProductManager
                 Quantity = p.Quantity,
                 DiscountPercent = p.DiscountPercent,
                 Description = p.Description,
-                Category = p.Category,
-                Images = p.Images
+                CategoryId = p.CategoryId,
+                Images = p.Images.Select(image => new ReadImageDto
+                {
+                    ImageUrl = image.ImageUrl,
+                }).ToList(),
             });
         }
         #endregion
@@ -121,8 +126,11 @@ namespace AuroraBLL.Managers.ProductManager
             producttoreturn.Quantity = productfromdb.Quantity;
             producttoreturn.DiscountPercent = productfromdb.DiscountPercent;
             producttoreturn.Description = productfromdb.Description;
-            producttoreturn.Category = productfromdb.Category;
-            producttoreturn.Images = productfromdb.Images;
+            producttoreturn.CategoryId = productfromdb.CategoryId;
+            producttoreturn.Images = productfromdb.Images.Select(image => new ReadImageDto
+            {
+                ImageUrl = image.ImageUrl,
+            }).ToList();
 
             return producttoreturn;
         }
@@ -143,7 +151,10 @@ namespace AuroraBLL.Managers.ProductManager
                 Quantity = p.Quantity,
                 DiscountPercent = p.DiscountPercent,
                 Description = p.Description,
-                Category = p.Category
+                Images = p.Images.Select(image => new ReadImageDto
+                {
+                    ImageUrl = image.ImageUrl,
+                }).ToList(),
             }
             );
         }
@@ -164,7 +175,11 @@ namespace AuroraBLL.Managers.ProductManager
                 Quantity = p.Quantity,
                 DiscountPercent = p.DiscountPercent,
                 Description = p.Description,
-                Category = p.Category
+                Images = p.Images.Select(image => new ReadImageDto
+                {
+                    ImageUrl = image.ImageUrl,
+                }).ToList(),
+                CategoryId = p.CategoryId
             }
             );
         }
@@ -185,7 +200,11 @@ namespace AuroraBLL.Managers.ProductManager
                 Quantity = p.Quantity,
                 DiscountPercent = p.DiscountPercent,
                 Description = p.Description,
-                Category = p.Category
+                Images = p.Images.Select(image => new ReadImageDto
+                {
+                    ImageUrl = image.ImageUrl,
+                }).ToList(),
+                CategoryId = p.CategoryId
             }
             );
         }
@@ -206,7 +225,11 @@ namespace AuroraBLL.Managers.ProductManager
                 Quantity = p.Quantity,
                 DiscountPercent = p.DiscountPercent,
                 Description = p.Description,
-                Category = p.Category
+                Images = p.Images.Select(image => new ReadImageDto
+                {
+                    ImageUrl = image.ImageUrl,
+                }).ToList(),
+                CategoryId = p.CategoryId
             }
             );
         }
