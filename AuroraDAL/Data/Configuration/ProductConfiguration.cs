@@ -15,7 +15,7 @@ namespace AuroraDAL.Data.Configuration
             builder.HasKey(i => i.Id);
 
             builder.Property(x => x.Name)
-               .HasColumnType("varchar")
+               .HasColumnType("varchar(MAX)")
                .IsRequired();
 
             builder.Property(x => x.Price)
@@ -27,10 +27,10 @@ namespace AuroraDAL.Data.Configuration
                .IsRequired();
 
             builder.Property(x => x.DiscountPercent)
-               .HasColumnType("int");
+               .HasColumnType("decimal(18,2)");
 
             builder.Property(x => x.Description)
-               .HasColumnType("varchar")
+               .HasColumnType("varchar(MAX)")
                .IsRequired();
 
 

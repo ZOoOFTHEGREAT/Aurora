@@ -15,11 +15,11 @@ namespace AuroraDAL.Data.Configuration
             builder.HasKey(i => i.Id);
 
             builder.Property(x => x.Name)
-               .HasColumnType("varchar")
+               .HasColumnType("varchar(MAX)")
                .IsRequired();
 
             builder.Property(x => x.Description)
-                .HasColumnType("varchar")
+                .HasColumnType("varchar(MAX)")
                 .IsRequired();
 
             builder.HasMany(x => x.Products)

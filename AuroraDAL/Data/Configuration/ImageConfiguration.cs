@@ -16,7 +16,7 @@ namespace AuroraDAL.Data.Configuration
 
             builder.Property(x => x.ImageUrl)
                 .IsRequired()
-               .HasColumnType("varchar");
+               .HasColumnType("varchar(MAX)");
 
             builder.HasOne(x => x.Product)
                 .WithMany(x => x.Images)

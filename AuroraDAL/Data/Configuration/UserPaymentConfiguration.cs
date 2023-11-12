@@ -17,11 +17,11 @@ public class UserPaymentConfiguration : IEntityTypeConfiguration<UserPayment>
         builder.Property(i => i.Id).ValueGeneratedOnAdd();
 
         builder.Property(i => i.PaymentType).
-              HasColumnType("varchar").
+              HasColumnType("varchar(MAX)").
               HasMaxLength(20).IsRequired();
 
         builder.Property(i => i.Provider).
-            HasColumnType("varchar")
+            HasColumnType("varchar(MAX)")
             .HasMaxLength(20);
 
         builder.Property(i => i.AccountNumber).HasMaxLength(12).IsRequired();

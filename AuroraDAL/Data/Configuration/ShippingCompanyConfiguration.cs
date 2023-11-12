@@ -16,7 +16,7 @@ namespace AuroraDAL.Data.Configuration
             builder.HasKey(i => i.Id);
 
             builder.Property(x => x.Name)
-               .HasColumnType("varchar")
+               .HasColumnType("varchar(MAX)")
                .IsRequired();
 
             builder.Property(x => x.ServicePrice)
@@ -24,11 +24,11 @@ namespace AuroraDAL.Data.Configuration
                 .IsRequired();
 
             builder.Property(x => x.WebSite)
-               .HasColumnType("varchar")
+               .HasColumnType("varchar(MAX)")
                .IsRequired();
 
             builder.Property(x => x.Telephone)
-                .HasColumnType("varchar")
+                .HasColumnType("varchar(MAX)")
                 .IsRequired();
 
 

@@ -16,11 +16,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\AuroraBLL\AuroraBLL.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AuroraBLL\AuroraBLL.csproj" />
+    <Folder Include="Services\Email\" />
   </ItemGroup>
 
 </Project>

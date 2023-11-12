@@ -19,7 +19,7 @@ namespace AuroraDAL.Data.Configuration
                .IsRequired();
 
             builder.Property(x => x.Status)
-                .HasColumnType("varchar")
+                .HasColumnType("bit")
                 .IsRequired();
 
             builder.Property(x => x.Date)

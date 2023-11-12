@@ -12,10 +12,10 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
 {
     public void Configure(EntityTypeBuilder<User> builder)
     {
-        builder.Property(i => i.Fname).HasColumnType("varchar")
+        builder.Property(i => i.Fname).HasColumnType("varchar(MAX)")
             .HasMaxLength(25);
 
-        builder.Property(i => i.Lname).HasColumnType("varchar")
+        builder.Property(i => i.Lname).HasColumnType("varchar(MAX)")
          .HasMaxLength(25);
 
     }

@@ -1,4 +1,6 @@
-
+using AuroraBLL.Managers.CategoryManager;
+using AuroraBLL.Managers.PaymentDetailManager;
+using AuroraBLL.Managers.ShippingCompanyManager;
 using AuroraDAL;
 using Microsoft.EntityFrameworkCore;
 
@@ -43,6 +45,14 @@ namespace Aurora
             builder.Services.AddScoped<ICategoryRepo       , CategoryRepo       >();
             builder.Services.AddScoped<ICartItemRepo       , CartItemRepo       >();
             builder.Services.AddScoped<ICartRepo, CartRepo>();
+            #endregion
+
+            #region Controllers
+
+            builder.Services.AddScoped<ICategoryManager , CategoryManager >();
+            builder.Services.AddScoped<IShippingCompanyManager, ShippingCompanyManager>();
+            builder.Services.AddScoped<IPaymentDetailManager , PaymentDetailManager >();
+
             #endregion
 
             var app = builder.Build();
