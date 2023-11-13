@@ -24,7 +24,7 @@ public class UserPaymentConfiguration : IEntityTypeConfiguration<UserPayment>
             HasColumnType("varchar(MAX)")
             .HasMaxLength(20);
 
-        builder.Property(i => i.AccountNumber).HasMaxLength(12).IsRequired();
+        builder.Property(i => i.AccountNumber).HasMaxLength(16).IsRequired();
 
 
         builder.Property(i => i.ExpireDate)

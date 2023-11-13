@@ -505,7 +505,6 @@ C:\Users\Ragab\Desktop\Aurora\Aurora\obj\Debug\net7.0\AuroraAPI.GeneratedMSBuild
 C:\Users\Ragab\Desktop\Aurora\Aurora\obj\Debug\net7.0\AuroraAPI.AssemblyInfoInputs.cache
 C:\Users\Ragab\Desktop\Aurora\Aurora\obj\Debug\net7.0\AuroraAPI.AssemblyInfo.cs
 C:\Users\Ragab\Desktop\Aurora\Aurora\obj\Debug\net7.0\AuroraAPI.csproj.CoreCompileInputs.cache
-C:\Users\Ragab\Desktop\Aurora\Aurora\obj\Debug\net7.0\AuroraAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Ragab\Desktop\Aurora\Aurora\obj\Debug\net7.0\AuroraAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Ragab\Desktop\Aurora\Aurora\obj\Debug\net7.0\staticwebassets\msbuild.AuroraAPI.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\Ragab\Desktop\Aurora\Aurora\obj\Debug\net7.0\staticwebassets\msbuild.build.AuroraAPI.props
@@ -521,3 +520,4 @@ C:\Users\Ragab\Desktop\Aurora\Aurora\obj\Debug\net7.0\refint\AuroraAPI.dll
 C:\Users\Ragab\Desktop\Aurora\Aurora\obj\Debug\net7.0\AuroraAPI.pdb
 C:\Users\Ragab\Desktop\Aurora\Aurora\obj\Debug\net7.0\AuroraAPI.genruntimeconfig.cache
 C:\Users\Ragab\Desktop\Aurora\Aurora\obj\Debug\net7.0\ref\AuroraAPI.dll
+C:\Users\Ragab\Desktop\Aurora\Aurora\obj\Debug\net7.0\AuroraAPI.MvcApplicationPartsAssemblyInfo.cs
