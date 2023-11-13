@@ -87,7 +87,7 @@ namespace AuroraBLL.Managers.UserPaymentManager
         #endregion
 
         #region Get User Payment By User Id
-        public ReadUserPaymentByUserIdDto GetUserPaymentByUserId(string userId)
+        public List<ReadUserPaymentByUserIdDto>?GetUserPaymentByUserId(string userId)
         {
             if (userId == "")
             {
@@ -100,14 +100,15 @@ namespace AuroraBLL.Managers.UserPaymentManager
                 return null!;
             }
 
-            return new ReadUserPaymentByUserIdDto
+            return userPayment.Select(x => new ReadUserPaymentByUserIdDto
             {
-                Id = userPayment.Id,
-                PaymentType = userPayment.PaymentType,
-                AccountNumber = userPayment.AccountNumber,
-                Provider = userPayment.Provider,
-                ExpireDate = userPayment.ExpireDate,
-            };
+                Id = x.Id,
+                PaymentType = x.PaymentType,
+                AccountNumber = x.AccountNumber,
+                Provider = x.Provider,
+                ExpireDate = x.ExpireDate,
+                UserId = x.UserId,
+            }).ToList();
         }
         #endregion
     }
