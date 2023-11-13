@@ -5,7 +5,7 @@ using AuroraBLL.Managers.ShippingCompanyManager;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AuroraAPI.Controllers
+namespace AuroraAPI.Controllers.ShippingCompanyController
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -54,7 +54,7 @@ namespace AuroraAPI.Controllers
         public ActionResult Add(AddShippingCompanyDto shippingCompany)
         {
             int isAdded = shippingCompanyManger.AddShippingCompany(shippingCompany);
-            return isAdded>0 ? Ok(isAdded) : BadRequest(isAdded);    
+            return isAdded > 0 ? Ok(isAdded) : BadRequest(isAdded);
         }
         #endregion
 

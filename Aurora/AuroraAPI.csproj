@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AuroraBLL\AuroraBLL.csproj" />
+    <ProjectReference Include="..\AuroraDAL\AuroraDAL.csproj" />
   </ItemGroup>
 
   <ItemGroup>
