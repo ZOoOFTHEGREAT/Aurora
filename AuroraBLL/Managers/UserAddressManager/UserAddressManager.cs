@@ -13,7 +13,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace AuroraBLL.Managers.UserAddressManager
 {
-    public class UserAddressManager: IUserAddressManager
+    public class UserAddressManager : IUserAddressManager
     {
         #region Inject IUnit Of Work
 
@@ -82,12 +82,12 @@ namespace AuroraBLL.Managers.UserAddressManager
         #endregion
 
         #region Get By Id
-        public ReadUserAddressDetailDto GetById(ReadUserAddressDetailDto readUserAddressDetailDto)
+        public ReadUserAddressDetailDto GetById(int id)
         {
-            if (readUserAddressDetailDto == null)
+            if (id == 0)
                 return null!;
 
-            var userAddress = unitOfWork.UserAddressRepo.GetById(readUserAddressDetailDto.Id);
+            var userAddress = unitOfWork.UserAddressRepo.GetById(id);
             if (userAddress == null)
                 return null!;
 

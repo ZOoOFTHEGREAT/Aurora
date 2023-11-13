@@ -19,13 +19,9 @@ public class UserRepo : GenericRepo<User>, IUserRepo
     public User GetUserById(string Id) => appDbContext.Set<User>().Find(Id)!;
 
     public User? GetUSerByPhoneNumber(string phoneNumber)
-    {
-        User user = (User)appDbContext.Users.Where(x => x.PhoneNumber == phoneNumber);
-        return user;
-    }
+             => appDbContext.Set<User>().FirstOrDefault(i => i.PhoneNumber == phoneNumber);
+
     public User? GetUSerByEmail(string email)
-    {
-        User user = (User)appDbContext.Users.Where(x => x.Email == email);
-        return user;
-    }
+             => appDbContext.Set<User>().FirstOrDefault(i => i.Email == email);
+
 }

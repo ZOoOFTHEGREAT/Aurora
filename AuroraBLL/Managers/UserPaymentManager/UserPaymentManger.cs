@@ -54,14 +54,14 @@ namespace AuroraBLL.Managers.UserPaymentManager
         #endregion
 
         #region Get By Id
-        public ReadUserPaymentDetailDto GetById(ReadUserPaymentDetailDto userPaymentDetailDto)
+        public ReadUserPaymentDetailDto GetById(int id)
         {
-            if (userPaymentDetailDto == null)
+            if (id == 0)
             {
                 return null!;
             }
 
-            var userPayment = unitOfWork.UserPaymentRepo.GetById(userPaymentDetailDto.Id);
+            var userPayment = unitOfWork.UserPaymentRepo.GetById(id);
             if (userPayment == null)
             {
                 return null!;
@@ -87,14 +87,14 @@ namespace AuroraBLL.Managers.UserPaymentManager
         #endregion
 
         #region Get User Payment By User Id
-        public ReadUserPaymentByUserIdDto GetUserPaymentByUserId(ReadUserPaymentByUserIdDto readUserPaymentByUserIdDto)
+        public ReadUserPaymentByUserIdDto GetUserPaymentByUserId(string userId)
         {
-            if (readUserPaymentByUserIdDto == null)
+            if (userId == "")
             {
                 return null!;
             }
 
-            var userPayment = unitOfWork.UserPaymentRepo.GetUserPaymentByUserId(readUserPaymentByUserIdDto.UserId);
+            var userPayment = unitOfWork.UserPaymentRepo.GetUserPaymentByUserId(userId);
             if (userPayment == null)
             {
                 return null!;

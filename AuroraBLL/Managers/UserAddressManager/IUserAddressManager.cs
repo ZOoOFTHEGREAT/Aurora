@@ -12,7 +12,7 @@ namespace AuroraBLL.Managers.UserAddressManager
     {
         int Add(AddUserAddressDto addUserAddressDto);
         IEnumerable<ReadUserAddresByUserIdDto> GetAddressByUserId(string userId);
-        ReadUserAddressDetailDto GetById(ReadUserAddressDetailDto readUserAddressDetailDto);
+        ReadUserAddressDetailDto GetById(int id);
         bool IsUpdated(UpdateUserAddressDto updateUserAddressDto);
         bool IsDeleted(int addressId);
     }
