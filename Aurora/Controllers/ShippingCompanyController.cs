@@ -9,13 +9,13 @@ namespace AuroraAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ShippingPaymentController : ControllerBase
+    public class ShippingCompanyController : ControllerBase
     {
         #region Inject 
 
         private readonly IShippingCompanyManager shippingCompanyManger;
 
-        public ShippingPaymentController(IShippingCompanyManager shippingCompanyManger)
+        public ShippingCompanyController(IShippingCompanyManager shippingCompanyManger)
         {
             this.shippingCompanyManger = shippingCompanyManger;
         }
