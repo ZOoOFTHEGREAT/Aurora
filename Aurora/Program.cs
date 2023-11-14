@@ -1,3 +1,4 @@
+using AuroraAPI.Services.Email;
 using AuroraBLL;
 using AuroraBLL.Managers.CategoryManager;
 using AuroraBLL.Managers.PaymentDetailManager;
@@ -108,7 +109,6 @@ namespace Aurora
             builder.Services.AddScoped<User>();
             #endregion
 
-
             #region Controllers
             builder.Services.AddScoped<IUserManger, UserManger>();
             builder.Services.AddScoped<IUserPaymentManager, UserPaymentManger>();
@@ -116,6 +116,12 @@ namespace Aurora
             builder.Services.AddScoped<ICategoryManager , CategoryManager >();
             builder.Services.AddScoped<IShippingCompanyManager, ShippingCompanyManager>();
             builder.Services.AddScoped<IPaymentDetailManager , PaymentDetailManager >();
+
+            #endregion
+
+            #region Services
+            builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSetting"));
+            builder.Services.AddScoped<IMailService, MailService>();
 
             #endregion
 

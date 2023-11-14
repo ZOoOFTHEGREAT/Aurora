@@ -521,3 +521,8 @@ C:\Users\Ragab\Desktop\Aurora\Aurora\obj\Debug\net7.0\AuroraAPI.pdb
 C:\Users\Ragab\Desktop\Aurora\Aurora\obj\Debug\net7.0\AuroraAPI.genruntimeconfig.cache
 C:\Users\Ragab\Desktop\Aurora\Aurora\obj\Debug\net7.0\ref\AuroraAPI.dll
 C:\Users\Ragab\Desktop\Aurora\Aurora\obj\Debug\net7.0\AuroraAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Ragab\Desktop\Aurora\Aurora\bin\Debug\net7.0\BouncyCastle.Cryptography.dll
+C:\Users\Ragab\Desktop\Aurora\Aurora\bin\Debug\net7.0\MailKit.dll
+C:\Users\Ragab\Desktop\Aurora\Aurora\bin\Debug\net7.0\MimeKit.dll
+C:\Users\Ragab\Desktop\Aurora\Aurora\bin\Debug\net7.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Ragab\Desktop\Aurora\Aurora\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Security.Cryptography.Pkcs.dll
