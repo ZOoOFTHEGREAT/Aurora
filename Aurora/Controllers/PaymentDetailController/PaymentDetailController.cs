@@ -1,4 +1,6 @@
-﻿using AuroraBLL.Dtos.CategoryDtos;
+﻿using AuroraAPI.Services.Email;
+using AuroraBLL.Dtos.CategoryDtos;
+using AuroraBLL.Dtos.MailRequestDtos;
 using AuroraBLL.Dtos.PaymentDetailDtos;
 using AuroraBLL.Managers.CategoryManager;
 using AuroraBLL.Managers.PaymentDetailManager;
@@ -17,7 +19,6 @@ namespace AuroraAPI.Controllers
         #region Inject 
 
         private readonly IPaymentDetailManager PaymentDetailManager;
-
 
         public PaymentDetailController(IPaymentDetailManager PaymentDetailManager)
         {
@@ -67,7 +68,7 @@ namespace AuroraAPI.Controllers
         [Route("AddPayment")]
 
         public ActionResult Add(AddPaymentDetailDto paymentDetail)
-        {
+        {   
             int isAdded = PaymentDetailManager.Add(paymentDetail);
             return isAdded>0? Ok(isAdded) : BadRequest(isAdded);
         }
