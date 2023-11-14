@@ -34,7 +34,7 @@ namespace AuroraBLL.Managers.OrderManager
             order.TotalPrice = Ordertobeadded.TotalPrice;
             order.Status = false;
             order.CreatedAt = DateTime.Now;
-            order.ExpectedDelivaryDate = DateTime.Today.AddDays(5);
+            order.ExpectedDeliveryDate = DateTime.Today.AddDays(5);
             order.AddressId = Ordertobeadded.AddressId;
             order.UserId = Ordertobeadded.UserId;
             order.ShippingCompanyId = Ordertobeadded.ShippingCompanyId;
@@ -88,7 +88,7 @@ namespace AuroraBLL.Managers.OrderManager
             order.TotalPrice = ordertobeupdated.TotalPrice;
             order.Status = ordertobeupdated.Status;
             order.DeliveryDate = ordertobeupdated.DeliveryDate;
-            order.ExpectedDelivaryDate = ordertobeupdated.ExpectedDelivaryDate;
+            order.ExpectedDeliveryDate = ordertobeupdated.ExpectedDeliveryDate;
             order.ShippingCompanyId = ordertobeupdated.ShippingCompanyId;
             order.AddressId = ordertobeupdated.AddressId;
             _IUnitOfWork.OrderRepo.Update(order);
@@ -112,7 +112,7 @@ namespace AuroraBLL.Managers.OrderManager
                     Status = o.Status,
                     DeliveryDate = o.DeliveryDate,
                     CreatedAt = o.CreatedAt,
-                    ExpectedDelivaryDate = o.ExpectedDelivaryDate,
+                    ExpectedDeliveryDate = o.ExpectedDeliveryDate,
                     AddressId = o.AddressId,
                     OrderItems = o.OrderItems.Select(orderitem => new ReadOrderItemDto
                     {
@@ -140,7 +140,7 @@ namespace AuroraBLL.Managers.OrderManager
                 Status = o.Status,
                 DeliveryDate = o.DeliveryDate,
                 CreatedAt = o.CreatedAt,
-                ExpectedDelivaryDate = o.ExpectedDelivaryDate,
+                ExpectedDeliveryDate = o.ExpectedDeliveryDate,
                 AddressId = o.AddressId,
                 ShippingCompanyId = o.ShippingCompanyId,
                 OrderItems = o.OrderItems.Select(orderitem => new ReadOrderItemDto
@@ -168,7 +168,7 @@ namespace AuroraBLL.Managers.OrderManager
             ordertoreturn.Status = orderfromdb.Status;
             ordertoreturn.DeliveryDate = orderfromdb.DeliveryDate;
             ordertoreturn.CreatedAt = orderfromdb.CreatedAt;
-            ordertoreturn.ExpectedDelivaryDate = orderfromdb.ExpectedDelivaryDate;
+            ordertoreturn.ExpectedDeliveryDate = orderfromdb.ExpectedDeliveryDate;
             ordertoreturn.UserId = orderfromdb.UserId;
             ordertoreturn.ShippingCompanyId = orderfromdb.ShippingCompanyId;
             ordertoreturn.AddressId = orderfromdb.AddressId;

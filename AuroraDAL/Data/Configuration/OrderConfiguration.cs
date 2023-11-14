@@ -29,7 +29,7 @@ namespace AuroraDAL.Data.Configuration
                .HasColumnType("date")
                .IsRequired();
 
-            builder.Property(x => x.ExpectedDelivaryDate)
+            builder.Property(x => x.ExpectedDeliveryDate)
                .HasColumnType("date");
 
             builder.HasOne(x => x.User)

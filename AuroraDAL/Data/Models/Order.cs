@@ -14,7 +14,7 @@ public class Order
     public bool Status { get; set; }
     public DateTime DeliveryDate { get; set; }
     public DateTime CreatedAt { get; set; }
-    public DateTime ExpectedDelivaryDate { get; set; }
+    public DateTime ExpectedDeliveryDate { get; set; }
 
 
     public string UserId { get; set;}=string.Empty;

@@ -13,7 +13,7 @@ namespace AuroraBLL.Dtos.OrderDtos
         public decimal TotalPrice { get; set; }
         public bool Status { get; set; }
         public DateTime DeliveryDate { get; set; }
-        public DateTime ExpectedDelivaryDate { get; set; }
+        public DateTime ExpectedDeliveryDate { get; set; }
 
         public int? ShippingCompanyId { get; set; }
         public int? AddressId { get; set; }

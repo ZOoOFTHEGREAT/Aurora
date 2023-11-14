@@ -15,7 +15,6 @@ namespace AuroraBLL.Managers.CartManager
         IEnumerable<ReadCartDto> GetAll();
         ReadCartDetailDto? GetCartByUserId(string userid);
         int AddCart(AddCartDto addCartDto);
-        bool UpdateCart(UpdateCartDto updateCartDto);
         bool DeleteCart(int id);
     }
 }

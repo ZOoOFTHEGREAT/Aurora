@@ -57,7 +57,6 @@ namespace AuroraBLL.Managers.CartManager
             {
                 Id = x.Id,
                 CreatedDate = x.CreatedDate,
-                User = x.User,
 
             }
             );
@@ -84,20 +83,6 @@ namespace AuroraBLL.Managers.CartManager
             
         }
         #endregion
-
-        #region Update Cart 
-        public bool UpdateCart(UpdateCartDto updateCartDto)
-        {
-            Cart? cartUpdate = unitOfWork.CartRepo.GetById(updateCartDto.Id);
-            if (cartUpdate == null) { return false; }
-
-            cartUpdate.CartItems = updateCartDto.CartItems;
-            unitOfWork.CartRepo.Update(cartUpdate);
-            unitOfWork.SaveChanges();
-            return true;
-        }
-        #endregion   
-
     }
 }
 

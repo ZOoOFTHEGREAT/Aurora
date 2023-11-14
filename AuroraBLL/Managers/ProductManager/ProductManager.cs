@@ -213,6 +213,13 @@ namespace AuroraBLL.Managers.ProductManager
         #region Get Products By Price
         public IEnumerable<ReadProductsByPriceDto> GetProductsByPrice(int minimumprice, int maximumprice)
         {
+            if(minimumprice>maximumprice)
+            {
+                var X = minimumprice;
+                minimumprice = maximumprice;
+                maximumprice = X;
+            }
+
             IEnumerable<Product>? productsfromdb = _IUnitOfWork.ProductRepo.GetProductByPrice(minimumprice, maximumprice);
             if (productsfromdb == null)
             {

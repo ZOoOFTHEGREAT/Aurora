@@ -123,7 +123,7 @@ namespace AuroraBLL.Managers.UserManager
                     Status = i.Status,
                     DeliveryDate = i.DeliveryDate,
                     CreatedAt = i.CreatedAt,
-                    ExpectedDelivaryDate = i.ExpectedDelivaryDate,
+                    ExpectedDeliveryDate = i.ExpectedDeliveryDate,
                     ShippingCompanyId = i.ShippingCompanyId,
                     AddressId = i.AddressId,
                     OrderItems = i.OrderItems.Select(orderitem => new ReadOrderItemDto
