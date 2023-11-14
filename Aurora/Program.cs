@@ -9,6 +9,7 @@ using AuroraBLL.Managers.UserPaymentManager;
 using AuroraDAL;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
 using System.Text;
@@ -136,9 +137,18 @@ namespace Aurora
             }
             #endregion
 
+            #region Images
+            var staticFilePath = Path.Combine(Environment.CurrentDirectory, "Images");
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(staticFilePath),
+                RequestPath = "/Images"
+            });
+            #endregion
 
             app.UseHttpsRedirection();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
 
