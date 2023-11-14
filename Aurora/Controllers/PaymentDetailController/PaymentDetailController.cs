@@ -20,6 +20,7 @@ namespace AuroraAPI.Controllers
 
         private readonly IPaymentDetailManager PaymentDetailManager;
 
+
         public PaymentDetailController(IPaymentDetailManager PaymentDetailManager)
         {
             this.PaymentDetailManager = PaymentDetailManager;
