@@ -126,6 +126,18 @@ namespace Aurora
 
             #endregion
 
+            #region CORS
+            var allowPolicy = "AllowPolicy";
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy(allowPolicy, builder =>
+                {
+                    builder.AllowAnyOrigin().
+                    AllowAnyHeader().AllowAnyOrigin();
+                });
+            });
+            #endregion
+
             var app = builder.Build();
 
             #region DefaultEnviroment
@@ -147,7 +159,7 @@ namespace Aurora
             #endregion
 
             app.UseHttpsRedirection();
-
+            app.UseCors(allowPolicy);
             app.UseAuthentication();
             app.UseAuthorization();
 

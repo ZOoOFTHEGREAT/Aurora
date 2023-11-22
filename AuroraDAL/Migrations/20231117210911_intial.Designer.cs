@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AuroraDAL.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231108174141_FirstByRagab")]
-    partial class FirstByRagab
+    [Migration("20231117210911_intial")]
+    partial class intial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -86,11 +86,11 @@ namespace AuroraDAL.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("varchar");
+                        .HasColumnType("varchar(MAX)");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("varchar");
+                        .HasColumnType("varchar(MAX)");
 
                     b.HasKey("Id");
 
@@ -107,7 +107,7 @@ namespace AuroraDAL.Migrations
 
                     b.Property<string>("ImageUrl")
                         .IsRequired()
-                        .HasColumnType("varchar");
+                        .HasColumnType("varchar(MAX)");
 
                     b.Property<int?>("ProductId")
                         .IsRequired()
@@ -138,7 +138,7 @@ namespace AuroraDAL.Migrations
                     b.Property<DateTime>("DeliveryDate")
                         .HasColumnType("date");
 
-                    b.Property<DateTime>("ExpectedDelivaryDate")
+                    b.Property<DateTime>("ExpectedDeliveryDate")
                         .HasColumnType("date");
 
                     b.Property<int?>("ShippingCompanyId")
@@ -175,12 +175,10 @@ namespace AuroraDAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("OrderId")
-                        .IsRequired()
+                    b.Property<int>("OrderId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("ProductId")
-                        .IsRequired()
+                    b.Property<int>("ProductId")
                         .HasColumnType("int");
 
                     b.Property<int>("Quantity")
@@ -212,9 +210,8 @@ namespace AuroraDAL.Migrations
                     b.Property<int>("OrderId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("varchar");
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
 
                     b.Property<int>("UserPaymentId")
                         .HasColumnType("int");
@@ -242,14 +239,14 @@ namespace AuroraDAL.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("varchar");
+                        .HasColumnType("varchar(MAX)");
 
-                    b.Property<int>("DiscountPercent")
-                        .HasColumnType("int");
+                    b.Property<decimal>("DiscountPercent")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("varchar");
+                        .HasColumnType("varchar(MAX)");
 
                     b.Property<int>("Price")
                         .HasColumnType("int");
@@ -274,18 +271,18 @@ namespace AuroraDAL.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("varchar");
+                        .HasColumnType("varchar(MAX)");
 
                     b.Property<int>("ServicePrice")
                         .HasColumnType("int");
 
                     b.Property<string>("Telephone")
                         .IsRequired()
-                        .HasColumnType("varchar");
+                        .HasColumnType("varchar(MAX)");
 
                     b.Property<string>("WebSite")
                         .IsRequired()
-                        .HasColumnType("varchar");
+                        .HasColumnType("varchar(MAX)");
 
                     b.HasKey("Id");
 
@@ -314,12 +311,12 @@ namespace AuroraDAL.Migrations
                     b.Property<string>("Fname")
                         .IsRequired()
                         .HasMaxLength(25)
-                        .HasColumnType("varchar");
+                        .HasColumnType("varchar(MAX)");
 
                     b.Property<string>("Lname")
                         .IsRequired()
                         .HasMaxLength(25)
-                        .HasColumnType("varchar");
+                        .HasColumnType("varchar(MAX)");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -385,21 +382,21 @@ namespace AuroraDAL.Migrations
                     b.Property<string>("City")
                         .IsRequired()
                         .HasMaxLength(25)
-                        .HasColumnType("varchar");
+                        .HasColumnType("varchar(MAX)");
 
                     b.Property<string>("Country")
                         .IsRequired()
                         .HasMaxLength(25)
-                        .HasColumnType("varchar");
+                        .HasColumnType("varchar(MAX)");
 
                     b.Property<string>("LineOne")
                         .IsRequired()
                         .HasMaxLength(25)
-                        .HasColumnType("varchar");
+                        .HasColumnType("varchar(MAX)");
 
                     b.Property<string>("LineTwo")
                         .HasMaxLength(25)
-                        .HasColumnType("varchar");
+                        .HasColumnType("varchar(MAX)");
 
                     b.Property<string>("UserId")
                         .IsRequired()
@@ -420,9 +417,10 @@ namespace AuroraDAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("AccountNumber")
-                        .HasMaxLength(12)
-                        .HasColumnType("int");
+                    b.Property<string>("AccountNumber")
+                        .IsRequired()
+                        .HasMaxLength(16)
+                        .HasColumnType("nvarchar(16)");
 
                     b.Property<DateTime>("ExpireDate")
                         .HasColumnType("date");
@@ -430,12 +428,12 @@ namespace AuroraDAL.Migrations
                     b.Property<string>("PaymentType")
                         .IsRequired()
                         .HasMaxLength(20)
-                        .HasColumnType("varchar");
+                        .HasColumnType("varchar(MAX)");
 
                     b.Property<string>("Provider")
                         .IsRequired()
                         .HasMaxLength(20)
-                        .HasColumnType("varchar");
+                        .HasColumnType("varchar(MAX)");
 
                     b.Property<string>("UserId")
                         .IsRequired()

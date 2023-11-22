@@ -31,7 +31,7 @@ namespace AuroraAPI.Controllers.UserController
             return CreatedAtAction("GetById",user);
         }
 
-        [Authorize(Policy = "ManagerPolicy")]
+        //[Authorize(Policy = "ManagerPolicy")]
         [HttpGet]
         [Route("email/{email}")]
         public ActionResult<ReadUserByEmailDto> GetUserByEmail(string email)
