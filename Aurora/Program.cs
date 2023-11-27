@@ -133,7 +133,7 @@ namespace Aurora
                 options.AddPolicy(allowPolicy, builder =>
                 {
                     builder.AllowAnyOrigin().
-                    AllowAnyHeader().AllowAnyOrigin();
+                    AllowAnyHeader().AllowAnyMethod();
                 });
             });
             #endregion

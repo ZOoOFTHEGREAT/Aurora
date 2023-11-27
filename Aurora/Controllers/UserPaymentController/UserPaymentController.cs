@@ -16,9 +16,8 @@ namespace AuroraAPI.Controllers.UserPaymentController
             this.userPaymentManager = userPaymentManager;
         }
 
-        [HttpGet]
-        [Route("byuser/{id}")]
-        public ActionResult<ReadUserPaymentByUserIdDto> GetByUserId(string userid)
+        [HttpGet("byuser/{userid}")]
+            public ActionResult<ReadUserPaymentByUserIdDto> GetByUserId(string userid)
         {
             if (userid == "")
                 return BadRequest();

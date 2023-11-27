@@ -531,3 +531,8 @@ C:\Users\HP\Desktop\Project\Aurora\Aurora\bin\Debug\net7.0\MailKit.dll
 C:\Users\HP\Desktop\Project\Aurora\Aurora\bin\Debug\net7.0\MimeKit.dll
 C:\Users\HP\Desktop\Project\Aurora\Aurora\bin\Debug\net7.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\HP\Desktop\Project\Aurora\Aurora\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Security.Cryptography.Pkcs.dll
+F:\iti\F pro\Aurora\Aurora\bin\Debug\net7.0\BouncyCastle.Cryptography.dll
+F:\iti\F pro\Aurora\Aurora\bin\Debug\net7.0\MailKit.dll
+F:\iti\F pro\Aurora\Aurora\bin\Debug\net7.0\MimeKit.dll
+F:\iti\F pro\Aurora\Aurora\bin\Debug\net7.0\System.Security.Cryptography.Pkcs.dll
+F:\iti\F pro\Aurora\Aurora\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Security.Cryptography.Pkcs.dll
