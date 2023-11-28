@@ -27,28 +27,28 @@ namespace AuroraDAL.Data.Configuration
                .HasForeignKey(x => x.CategoryId);
 
 
-            //builder.HasData(new List<Category>
-            //{
-            //    new Category
-            //    {
-            //        Id=1,
-            //        Name="Fashion",
-            //        Description="Clothes such as jeans, coats and etc...",
-            //    },
-            //    new Category
-            //    {
-            //        Id=2,
-            //        Name="Health & Beauty",
-            //        Description="Drugs such as makeup, perfumes and etc...",
-            //    },
-            //    new Category
-            //    {
-            //        Id=3,
-            //        Name="Electronics",
-            //        Description="Devices such as Phones, Laptops and etc...",
-            //    },
+            builder.HasData(new List<Category>
+            {
+                new Category
+                {
+                    Id=1,
+                    Name="Fashion",
+                    Description="Clothes such as jeans, coats and etc...",
+                },
+                new Category
+                {
+                    Id=2,
+                    Name="Health & Beauty",
+                    Description="Drugs such as makeup, perfumes and etc...",
+                },
+                new Category
+                {
+                    Id=3,
+                    Name="Electronics",
+                    Description="Devices such as Phones, Laptops and etc...",
+                },
 
-            //});
+            });
         }
     }
 }
