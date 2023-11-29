@@ -15,7 +15,5 @@ namespace AuroraBLL.Dtos.OrderDtos
         public string UserId { get; set; } = string.Empty;
         public int? ShippingCompanyId { get; set; }
         public int? AddressId { get; set; }
-
-        public virtual ICollection<ReadOrderItemDto> OrderItems { get; set; } = new List<ReadOrderItemDto>();
     }
 }

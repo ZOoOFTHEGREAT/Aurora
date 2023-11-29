@@ -36,6 +36,12 @@ namespace AuroraBLL.Managers.OrderItemManager
   
             };
             unitOfWork.OrderItemRepo.Add(OrderItemRequested);
+            Product? purchasedproduct = unitOfWork.ProductRepo.GetById(addOrderItem.ProductId);
+            if (purchasedproduct != null)
+            {
+                purchasedproduct.Quantity = purchasedproduct.Quantity - addOrderItem.Quantity;
+                unitOfWork.ProductRepo.Update(purchasedproduct);
+            }
             return unitOfWork.SaveChanges();
         }
         #endregion

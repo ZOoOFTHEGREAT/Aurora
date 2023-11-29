@@ -38,23 +38,6 @@ namespace AuroraBLL.Managers.OrderManager
             order.AddressId = Ordertobeadded.AddressId;
             order.UserId = Ordertobeadded.UserId;
             order.ShippingCompanyId = Ordertobeadded.ShippingCompanyId;
-            order.OrderItems = Ordertobeadded.OrderItems.Select(orderitems => new OrderItem
-            {
-                Quantity = orderitems.Quantity,
-                OrderId = orderitems.OrderId,
-                ProductId = orderitems.ProductId,
-            }).ToList();
-
-            //update the quantaty of products based on the purchased items
-            foreach(var item in order.OrderItems)
-            {
-                Product? purchasedproduct = _IUnitOfWork.ProductRepo.GetById(item.ProductId);
-                if (purchasedproduct != null) 
-                {
-                    purchasedproduct.Quantity = purchasedproduct.Quantity - item.Quantity;
-                    _IUnitOfWork.ProductRepo.Update(purchasedproduct);
-                }
-            }
 
             _IUnitOfWork.OrderRepo.Add(order);
             _IUnitOfWork.SaveChanges();
@@ -148,6 +131,14 @@ namespace AuroraBLL.Managers.OrderManager
                     Quantity = orderitem.Quantity,
                     OrderId = orderitem.OrderId,
                     ProductId = orderitem.ProductId,
+                }).ToList(),
+                PaymentDetails = o.PaymentDetails.Select(PaymentDetail => new ReadPaymentDetailsDto
+                {
+                    Amount = PaymentDetail.Amount,
+                    Status = PaymentDetail.Status,
+                    Date = PaymentDetail.Date,
+                    OrderId = PaymentDetail.OrderId,
+                    UserPaymentId = PaymentDetail.UserPaymentId,
                 }).ToList(),
             }
             );

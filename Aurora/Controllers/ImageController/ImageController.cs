@@ -62,9 +62,9 @@ namespace AuroraAPI.Controllers.ImageController
         [HttpGet]
         [Route("Byproduct/{productId}")]
 
-        public ActionResult<IEnumerable<ImagesReadByProductIdDto>> GetAllImagesByProductId(int productid)
+        public ActionResult<IEnumerable<ImagesReadByProductIdDto>> GetAllImagesByProductId(int productId)
         {
-            IEnumerable<ImagesReadByProductIdDto>? productimages = imagemanager.GetImagesByProductId(productid);
+            IEnumerable<ImagesReadByProductIdDto>? productimages = imagemanager.GetImagesByProductId(productId);
             if (productimages == null) { return NotFound(); }
             return Ok(productimages);
 

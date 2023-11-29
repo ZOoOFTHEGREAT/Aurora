@@ -37,7 +37,7 @@ public class OrderRepo : GenericRepo<Order>, IOrderRepo
             Include(Order => Order.PaymentDetails).
             Include(Order => Order.OrderItems).
             ThenInclude(OrderItems => OrderItems.Product).
-            Where(x => x.UserId == UserId).ToList();
+            Where(Order => Order.UserId == UserId).ToList();
 
     }
     #endregion

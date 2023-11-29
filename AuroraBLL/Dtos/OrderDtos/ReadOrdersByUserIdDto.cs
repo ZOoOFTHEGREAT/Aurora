@@ -1,4 +1,5 @@
 ﻿using AuroraBLL.Dtos.OrderItemDtos;
+using AuroraBLL.Dtos.PaymentDetailDtos;
 using AuroraBLL.Dtos.UserPaymentDtos;
 using AuroraDAL;
 using System;
@@ -21,6 +22,6 @@ namespace AuroraBLL.Dtos.OrderDtos
         public int? ShippingCompanyId { get; set; }
         public int? AddressId { get; set; }
         public virtual ICollection<ReadOrderItemDto> OrderItems { get; set; } = new List<ReadOrderItemDto>();
-        public virtual ICollection<ReadUserPaymentDetailDto> PaymentDetails { get; set; } = new List<ReadUserPaymentDetailDto>();
+        public virtual ICollection<ReadPaymentDetailsDto> PaymentDetails { get; set; } = new List<ReadPaymentDetailsDto>();
     }
 }

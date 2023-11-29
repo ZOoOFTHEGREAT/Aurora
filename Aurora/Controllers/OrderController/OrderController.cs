@@ -59,9 +59,9 @@ namespace AuroraAPI.Controllers.OrderController
         [HttpGet]
         [Route("Byshippingcompany/{shippingcompanyId}")]
 
-        public ActionResult<IEnumerable<ReadOrdersByShippingCompanyIdDto>> GetAllOrdersByShippingCompanyId(int shippingcompanyid)
+        public ActionResult<IEnumerable<ReadOrdersByShippingCompanyIdDto>> GetAllOrdersByShippingCompanyId(int shippingcompanyId)
         {
-            IEnumerable<ReadOrdersByShippingCompanyIdDto>? orders = ordermanager.GetOrdersByShippingCompanyId(shippingcompanyid);
+            IEnumerable<ReadOrdersByShippingCompanyIdDto>? orders = ordermanager.GetOrdersByShippingCompanyId(shippingcompanyId);
             if (orders == null) { return NotFound(); }
             return Ok(orders);
 
@@ -72,9 +72,10 @@ namespace AuroraAPI.Controllers.OrderController
         [HttpGet]
         [Route("Byuser/{UserId}")]
 
-        public ActionResult<IEnumerable<ReadOrdersByUserIdDto>> GetAllOrdersByUserId(string userid)
+        public ActionResult<IEnumerable<ReadOrdersByUserIdDto>> GetAllOrdersByUserId(string UserId)
         {
-            IEnumerable<ReadOrdersByUserIdDto>? orders = ordermanager.GetOrdersByUserId(userid);
+            IEnumerable<ReadOrdersByUserIdDto>? orders = ordermanager.GetOrdersByUserId(UserId
+                );
             if (orders == null) { return NotFound(); }
             return Ok(orders);
 
@@ -84,9 +85,9 @@ namespace AuroraAPI.Controllers.OrderController
         #region Get Order By Id
         [HttpGet]
         [Route("{OrderId}")]
-        public ActionResult<ReadOrderByIdDto> GetOrder(int orderid)
+        public ActionResult<ReadOrderByIdDto> GetOrder(int OrderId)
         {
-            ReadOrderByIdDto? order = ordermanager.GetOrderById(orderid);
+            ReadOrderByIdDto? order = ordermanager.GetOrderById(OrderId);
             if (order == null) { return NotFound(); }
             return Ok(order);
         }

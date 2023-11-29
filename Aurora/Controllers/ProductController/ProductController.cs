@@ -73,9 +73,9 @@ namespace AuroraAPI.Controllers.ProductController
         #region Get Product By Id 
         [HttpGet]
         [Route("{ProductId}")]
-        public ActionResult<ReadProductByIdDto> GetProduct(int productid)
+        public ActionResult<ReadProductByIdDto> GetProduct(int ProductId)
         {
-            ReadProductByIdDto? product = productmanger.GetProductById(productid);
+            ReadProductByIdDto? product = productmanger.GetProductById(ProductId);
             if (product == null) { return NotFound(); }
             return Ok(product);
         }
@@ -85,9 +85,9 @@ namespace AuroraAPI.Controllers.ProductController
         [HttpGet]
         [Route("Bycategory/{categoryId}")]
 
-        public ActionResult<IEnumerable<ReadProductsByCategoryIdDto>> GetAllProductsByCategoryId(int categoryid)
+        public ActionResult<IEnumerable<ReadProductsByCategoryIdDto>> GetAllProductsByCategoryId(int categoryId)
         {
-            IEnumerable<ReadProductsByCategoryIdDto>? products = productmanger.GetProductsByCategoryId(categoryid);
+            IEnumerable<ReadProductsByCategoryIdDto>? products = productmanger.GetProductsByCategoryId(categoryId);
             if (products == null) { return NotFound(); }
             return Ok(products);
 
@@ -111,9 +111,9 @@ namespace AuroraAPI.Controllers.ProductController
         [HttpGet]
         [Route("ByName/{productName}")]
 
-        public ActionResult<IEnumerable<ReadProductsByNameDto>> GetAllProductsByName(string productname)
+        public ActionResult<IEnumerable<ReadProductsByNameDto>> GetAllProductsByName(string productName)
         {
-            IEnumerable<ReadProductsByNameDto>? products = productmanger.GetProductsByName(productname);
+            IEnumerable<ReadProductsByNameDto>? products = productmanger.GetProductsByName(productName);
             if (products == null) { return NotFound(); }
             return Ok(products);
 
@@ -124,9 +124,9 @@ namespace AuroraAPI.Controllers.ProductController
         [HttpGet]
         [Route("Byprice/{price1,price2}")]
 
-        public ActionResult<IEnumerable<ReadProductsByPriceDto>> GetAllProductsByPrice(int price1,int price2)
+        public ActionResult<IEnumerable<ReadProductsByPriceDto>> GetAllProductsByPrice(int price1, int price2)
         {
-            IEnumerable<ReadProductsByPriceDto>? products = productmanger.GetProductsByPrice(price1,price2);
+            IEnumerable<ReadProductsByPriceDto>? products = productmanger.GetProductsByPrice(price1, price2);
             if (products == null) { return NotFound(); }
             return Ok(products);
 
