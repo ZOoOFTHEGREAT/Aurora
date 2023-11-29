@@ -10,4 +10,6 @@ public interface IOrderRepo:IGenericRepo<Order>
 {
     List<Order>? GetOrderssByUserId(string id);
     List<Order>? GetOrdersByShippingCompanyId(int id);
+    new List<Order> GetAll();
+    new Order? GetById(int id);
 }

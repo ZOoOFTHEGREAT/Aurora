@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,7 @@ public class CartRepo : GenericRepo<Cart>, ICartRepo
     #region Get Cart By User Id 
     public Cart? GetCartByUserId(string UserID)
     {
-        return appDbContext.Set<Cart>().Find(UserID);
+        return appDbContext.Set<Cart>().Include(cart => cart.CartItems).ThenInclude(CartItem=>CartItem.Product).FirstOrDefault(cart => cart.UserId == UserID);
     }
     #endregion
 

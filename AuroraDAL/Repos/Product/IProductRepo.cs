@@ -12,5 +12,6 @@ public interface IProductRepo:IGenericRepo<Product>
     List<Product>? GetProductByPrice(int price1, int price2);
     List<Product>? GetProductByName(string productname);
     List<Product>? GetProductByDiscount();
-
+    new List<Product> GetAll();
+    new Product? GetById(int id);
 }

@@ -8,4 +8,6 @@ namespace AuroraDAL;
 
 public interface IShippingCompanyRepo:IGenericRepo<ShippingCompany>
 {
+    new List<ShippingCompany> GetAll();
+    new ShippingCompany? GetById(int id);
 }

@@ -77,6 +77,7 @@ namespace AuroraBLL.Managers.CartManager
                 CartItems = cartRepo.CartItems.Select(x => new ReadCartItemDetailDto
                 {
                     Quantity = x.Quantity,
+                    ProductId = x.ProductId,
                 }).ToList(),
 
             };
