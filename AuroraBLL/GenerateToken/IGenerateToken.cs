@@ -15,5 +15,4 @@ public interface IGenerateToken
     public TokenDto Token(IList<Claim> claimList);
 
     public User FillUser(AddUserDto userDto);
-
 }
