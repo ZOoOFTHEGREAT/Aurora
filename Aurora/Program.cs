@@ -1,7 +1,13 @@
 using AuroraAPI.Services.Email;
 using AuroraBLL;
+using AuroraBLL.Managers.CartItemManager;
+using AuroraBLL.Managers.CartManager;
 using AuroraBLL.Managers.CategoryManager;
+using AuroraBLL.Managers.ImageManager;
+using AuroraBLL.Managers.OrderItemManager;
+using AuroraBLL.Managers.OrderManager;
 using AuroraBLL.Managers.PaymentDetailManager;
+using AuroraBLL.Managers.ProductManager;
 using AuroraBLL.Managers.ShippingCompanyManager;
 using AuroraBLL.Managers.UserAddressManager;
 using AuroraBLL.Managers.UserManager;
@@ -117,7 +123,12 @@ namespace Aurora
             builder.Services.AddScoped<ICategoryManager , CategoryManager >();
             builder.Services.AddScoped<IShippingCompanyManager, ShippingCompanyManager>();
             builder.Services.AddScoped<IPaymentDetailManager , PaymentDetailManager >();
-
+            builder.Services.AddScoped<IProductManager, ProductManager >();
+            builder.Services.AddScoped<IImagesManager, ImagesManager >();
+            builder.Services.AddScoped<ICartManager,CartManager>();
+            builder.Services.AddScoped<ICartItemManager,cartItemManager>();
+            builder.Services.AddScoped<IOrderManager , OrderManager>();
+            builder.Services.AddScoped<IOrderItemManager,OrderItemManager>();
             #endregion
 
             #region Services
