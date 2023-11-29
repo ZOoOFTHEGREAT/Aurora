@@ -1,4 +1,5 @@
 ﻿using AuroraBLL;
+using AuroraBLL.Dtos.Authuntication;
 using AuroraBLL.Dtos.AuthunticationDtos;
 using AuroraBLL.Dtos.UserDtos;
 using AuroraDAL;
@@ -68,5 +69,56 @@ namespace AuroraAPI.Controllers.Authuntication
 
             return userDto;
         }
+
+        [HttpPut]
+        public async Task<ActionResult<UpdateUserDto>> UpdateUserData(UpdateUserDto userToUpdate)
+        {
+            if (userToUpdate == null)
+                return BadRequest();
+            var usr = await userManager.FindByIdAsync(userToUpdate.Id);
+            if (usr == null)
+                return BadRequest();
+
+            usr!.UserName = userToUpdate.UserName;
+            usr!.Fname = userToUpdate.Fname;
+            usr!.Lname = userToUpdate.Lname;
+            usr!.Email = userToUpdate.Email;
+            usr!.PhoneNumber = userToUpdate.PhoneNumber;
+            usr!.ZipCode = userToUpdate.ZipCode;
+
+            var result = await userManager.UpdateAsync(usr);
+            if (!result.Succeeded)
+            {
+                return BadRequest();
+            }
+            return Ok(userToUpdate);
+        }
+        [HttpPut]
+        [Route("updatepw")]
+        public async Task<ActionResult<ChangePwDto>> UpdateUserPw(ChangePwDto pwDto)
+        {
+            if (pwDto == null)
+                return NotFound();
+            var usr = await userManager.FindByIdAsync(pwDto.Id);
+            if (usr == null)
+                return NotFound();
+            if (string.IsNullOrEmpty(pwDto.OldPassword))
+                return BadRequest();
+            var oldUserPwCheck = await userManager.CheckPasswordAsync(usr, pwDto.OldPassword);
+            if (!oldUserPwCheck)
+                return BadRequest();
+            if (!string.IsNullOrEmpty(pwDto.Password))
+            {
+                var changePasswordResult = await userManager.ChangePasswordAsync(usr, pwDto.OldPassword, pwDto.Password);
+
+                if (!changePasswordResult.Succeeded)
+                {
+                    return BadRequest();
+                }
+            }
+            return Ok();
+        }
+
+
     }
 }

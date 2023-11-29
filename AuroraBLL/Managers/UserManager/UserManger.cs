@@ -54,7 +54,7 @@ namespace AuroraBLL.Managers.UserManager
             getUser.Fname = userDto.Fname;
             getUser.Lname = userDto.Lname;
             getUser.PhoneNumber = userDto.PhoneNumber;
-            getUser.PasswordHash = userDto.PasswordHash;
+            //getUser.PasswordHash = userDto.PasswordHash;
             getUser.ZipCode = userDto.ZipCode;
             unitOfWork.UserRepo.Update(getUser);
             unitOfWork.SaveChanges();

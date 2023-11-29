@@ -1,6 +1,7 @@
 ﻿using AuroraBLL.Dtos.AuthunticationDtos;
 using AuroraBLL.Dtos.UserDtos;
 using AuroraDAL;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -13,11 +14,13 @@ public class GenerateToken : IGenerateToken
 {
     private readonly IConfiguration configuration;
     private readonly User user;
+    private readonly UserManager<User> userManager;
 
-    public GenerateToken(IConfiguration configuration,User user)
+    public GenerateToken(IConfiguration configuration,User user,UserManager<User> userManager)
     {
         this.configuration = configuration;
         this.user = user;
+        this.userManager = userManager;
     }
 
     public User FillUser(AddUserDto userDto)
@@ -31,7 +34,7 @@ public class GenerateToken : IGenerateToken
         user.ZipCode = userDto.ZipCode;
         return user;
     }
-
+ 
     public TokenDto Token(IList<Claim> claimList)
     {
         var secretKey = configuration.GetValue<string>("SecretKey");
@@ -53,5 +56,4 @@ public class GenerateToken : IGenerateToken
         };
     }
 
-    
 }

@@ -75,7 +75,7 @@ namespace AuroraBLL.Managers.UserAddressManager
             userAddress.Country = updateUserAddressDto.Country;
             userAddress.City = updateUserAddressDto.City;
 
-            unitOfWork.UserAddressRepo.Add(userAddress);
+            unitOfWork.UserAddressRepo.Update(userAddress);
             unitOfWork.SaveChanges();
             return true;
         }
@@ -113,6 +113,7 @@ namespace AuroraBLL.Managers.UserAddressManager
             }
             return Addressesfromdb.Select(I => new ReadUserAddresByUserIdDto
             {
+                Id=I.Id,
                 Address = I.Address,
                 LineOne = I.LineOne,
                 LineTwo = I.LineTwo,
