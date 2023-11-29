@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AuroraAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e01c2a503a277a8dae495c11240227573f82b14")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b8e3e23582626b8b3cab07b61ceefff3f76bc304")]
 [assembly: System.Reflection.AssemblyProductAttribute("AuroraAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AuroraAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
