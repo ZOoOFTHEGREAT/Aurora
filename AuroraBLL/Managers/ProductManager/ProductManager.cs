@@ -31,6 +31,7 @@ namespace AuroraBLL.Managers.ProductManager
 
             producttoadd.Name = product.Name;
             producttoadd.Price = product.Price;
+            producttoadd.DiscountPercent = product.DiscountPercent;
             producttoadd.Quantity = product.Quantity;
             producttoadd.Description = product.Description;
             producttoadd.CategoryId = product.CategoryId;

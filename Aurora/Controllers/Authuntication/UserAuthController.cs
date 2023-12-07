@@ -106,7 +106,7 @@ namespace AuroraAPI.Controllers.Authuntication
                 return BadRequest();
             var oldUserPwCheck = await userManager.CheckPasswordAsync(usr, pwDto.OldPassword);
             if (!oldUserPwCheck)
-                return BadRequest();
+                return Unauthorized();
             if (!string.IsNullOrEmpty(pwDto.Password))
             {
                 var changePasswordResult = await userManager.ChangePasswordAsync(usr, pwDto.OldPassword, pwDto.Password);

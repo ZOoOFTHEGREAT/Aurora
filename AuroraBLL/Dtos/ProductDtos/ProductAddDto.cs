@@ -12,6 +12,7 @@ namespace AuroraBLL.Dtos.ProductDtos
         public string Name { get; set; } = string.Empty;
         public decimal Price { get; set; }
         public int Quantity { get; set; }
+        public decimal DiscountPercent { get; set; } = 0;
         public string Description { get; set; } = string.Empty;
         public int? CategoryId { get; set; }
     }
