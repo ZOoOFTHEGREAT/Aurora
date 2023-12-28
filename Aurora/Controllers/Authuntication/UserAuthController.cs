@@ -1,4 +1,5 @@
-﻿using AuroraBLL;
+﻿using AuroraAPI.Services.Email;
+using AuroraBLL;
 using AuroraBLL.Dtos.Authuntication;
 using AuroraBLL.Dtos.AuthunticationDtos;
 using AuroraBLL.Dtos.UserDtos;
@@ -18,11 +19,13 @@ namespace AuroraAPI.Controllers.Authuntication
     {
         private readonly UserManager<User> userManager;
         private readonly IGenerateToken generatedToken;
+        private readonly IMailService mailService;
 
-        public UserAuthController(UserManager<User> userManager,IGenerateToken generatedToken)
+        public UserAuthController(UserManager<User> userManager,IGenerateToken generatedToken,IMailService mailService)
         {
             this.userManager = userManager;
             this.generatedToken = generatedToken;
+            this.mailService = mailService;
         }
 
         [HttpPost]
@@ -66,6 +69,7 @@ namespace AuroraAPI.Controllers.Authuntication
             };
 
             await userManager.AddClaimsAsync(user,claimList);
+            await mailService.SendEmailAsync(userDto.Email, "Welcome To Aurora", $"Hi {userDto.Fname}+{userDto.Lname} Welcome To our Website");
 
             return userDto;
         }

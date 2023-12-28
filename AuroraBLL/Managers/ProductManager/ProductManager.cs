@@ -98,6 +98,7 @@ namespace AuroraBLL.Managers.ProductManager
             }
             return productsfromdb.Select(p => new ReadAllProductsDto
             {
+                Id = p.Id,
                 Name = p.Name,
                 Price = p.Price,
                 Quantity = p.Quantity,
